@@ -1,0 +1,4 @@
+AuthType Basic
+AuthUserFile /usr/local/apache/passwd/passwords
+require valid-user
+AuthName "Password Protected Directory"

@@ -1,0 +1,99 @@
+html, body, div, img, ol, ul, li, dl, dt, dd, h1, h2, h3, p, form, input, select, textarea {margin: 0; padding: 0;}
+
+body, html {width: 100%; height: 100%;}
+body {background: #ABDE81 url('includes/templates/images/bg-main.gif') 50% 0 repeat-y; min-width: 770px; text-align: center;}
+body, div {font: 12px Tahoma, Verdana, Arial, sans-serif; color: #000000;}
+
+a img, img {border: none;}
+
+a {color: #3C14A7; text-decoration: underline;}
+a:hover {color: #3C14A7; text-decoration: none;}
+
+a.gr, a.gr:hover {color: #666666;}
+
+input {padding: 3px 5px; font: 12px Tahoma, Verdana, Arial, sans-serif; color: #000000; border: 1px solid #B9B9C1; margin-top: 2px;}
+input.sub {padding: 0px 5px;}
+
+.container {width: 721px; position: relative; margin: 0 auto; text-align: left; height: auto; min-height: 100%; background: #ffffff url('includes/templates/images/bg-main-bot.gif') bottom left no-repeat;}
+
+.w490 {width: 490px; float: left;}
+.w423 {width: 423px; float: left;}
+.w298 {width: 298px; float: left;}
+.w222 {width: 222px; float: left;}
+
+.w192f, .w192 {width: 180px;}
+.w186s {width: 198px; float: left;}
+.w192f {float: left;}
+
+.fl {float: left;}
+
+.index {z-index: 600;}
+
+.ar {text-align: right;}
+
+label {font-size: 10px; color: #333333; font-weight: bold; padding-left: 3px;}
+
+/* spacer */
+.spacer {font-size: 1px; height: 1px; clear: both; width: 100%;}
+.wrap {width: 100%;}
+
+.s19 {height: 19px;}
+.s2 {height: 2px;}
+/* /spacer */
+
+/* logo && header */
+.headerpart {position: absolute; z-index: 4; top: 0; left: 0; width: 100%; height: 346px; background: url('includes/templates/images/logo.jpg') no-repeat;}
+.headercontent {position: absolute; z-index: 20; top: 0; left: 0; width: 100%; height: 346px;}
+
+.lh {height: 37px; padding-left: 326px;}
+.login {height: 84px; width: 100%; background: url('includes/templates/images/bg-login.gif') no-repeat;}
+.login-more {height: 28px; width: 100%;}
+.login-more div {font-size: 11px; padding: 4px 0 0 135px;}
+
+.lpad {padding: 10px 0 0 10px;}
+.submit {width: 390px; text-align: right;}
+
+.welcome {width: 423px;}
+
+.w-top {height: 64px; background: url('includes/templates/images/bg-w-top.gif') no-repeat;}
+.w-con {background: url('includes/templates/images/bg-w-con.gif') bottom left no-repeat;}
+.w-con .cpad {font-size: 11px; color: #00531B; padding: 0 20px 19px 27px;}
+/* /logo */
+
+/* container */
+.contentpart {width: 100%; position: relative; z-index: 5;}
+.contentpart .padding {padding: 281px 0 0 3px;}
+
+.title {height: 47px;}
+
+.block, .blocks {width: 100%;}
+.block .item {background: url('includes/templates/images/bg-plash.gif') no-repeat;}
+.blocks .item {background: url('includes/templates/images/bg-blocks.gif') no-repeat;}
+.block .item, .blocks .item {float: left; width: 107px; height: 141px; margin-right: 13px;}
+.block .last, .blocks .last {float: left; width: 107px; height: 141px; margin-right: 0 !important;}
+.block .item .pad, .blocks .item .pad {padding: 8px 6px 0 6px;}
+.block .item .name, .blocks .item .name {height: 20px; width: 100%;}
+.block .item .img, .blocks .item .img {width: 95px; height: 92px;}
+.block .item .name a, .block .item .name a:hover, .blocks .item .name a, .blocks .item .name a:hover {color: #0000B0;}
+.block .item .city span, .blocks .item .city span {color: #333333; width: 85px; font-size: 11px; display: block;}
+.blocks .item .city a, .blocks .item .city a:hover {color: #000066; font-size: 11px;}
+
+.tpad {padding-top: 47px;}
+
+.m-photo {background: url('includes/templates/images/bg-m-photo.gif') no-repeat; height: 244px; width: 100%; padding: 9px 0 0 0;}
+.m-photo .wrap div {padding-left: 13px;}
+
+.m-next {width: 100%; height: 72px; background: url('includes/templates/images/bg-next.gif') no-repeat;}
+.m-next .t {font-size: 11px; color: #3E2500; padding: 18px 0 0 19px; width: 120px; float: left;}
+.m-next .a, .m-next .a a, .m-next .a a:hover{display: block; width: 79px; height: 72px; float: left;}
+
+/* /container */
+
+/* footer */
+.footerspacer {height: 72px;}
+.footer {height: 31px; clear: both; position: absolute; width: 100%; left: 0; bottom: 0;}
+
+.b-menu ul {padding-left: 33px;}
+.b-menu ul li {display: inline; font-size: 12px; font-weight: bold; list-style: none; margin-right: 20px; padding-left: 16px; background: url('includes/templates/images/bg-main-li.gif') 0 2px no-repeat; font-size: 11px;}
+.b-menu ul li a, .footer ul li a:hover {color: #009933;}
+/* /footer */

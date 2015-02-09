@@ -1,0 +1,23 @@
+
+<forms>
+    <form id="1" label="Name">
+        <item type="textinput" name="firstName" label="First Name" />
+        <item type="textinput" name="lastName" label="Last Name" />
+    </form>
+    <form id="2" label="Address">
+        <item type="textinput" name="address" label="Street Address" />
+        <item type="textinput" name="city" label="City" />
+        <item type="textinput" name="state" label="State" />
+        <item type="textinput" name="postalCode" label="Postal Code" />
+    </form>
+    <form id="3" label="Phone and Email">
+        <item type="textinput" name="phone" label="Phone Number" />
+        <item type="textinput" name="email" label="Email" />
+    </form>
+    <form id="4" label="Address">
+        <item type="textarea" name="agreement" label="">
+        Example Corporation reserves all rights.
+        </item>
+        <item type="checkbox" itemName="city" label="I agree" />
+    </form>
+</forms>

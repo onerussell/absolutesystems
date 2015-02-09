@@ -1,0 +1,43 @@
+Options +ExecCGI
+# =====================================
+# engine37 Catalog v3.0
+# =====================================
+# This file used with Apache WebServers
+
+# Please comment this string after real project start
+# php_value include_path ".;/usr/local/php5/PEAR;/home/frog.ru/www/siteadmin/includes/libs/pear"
+
+# PHP Errors - Default behavior
+php_flag  display_errors         on
+php_flag  display_startup_errors on
+php_value error_reporting        2047
+
+# ======== Base settings ==============
+# DirectoryIndex index.php
+# ErrorDocument 403 /404.html
+# ErrorDocument 404 /404.html
+
+# Disable adding of quotes in PHP Super-Globals-Arrays
+# php_flag magic_quotes_gpc off
+# php_flag magic_quotes_runtime off
+
+# <files paycheck.php>
+# php_value post_max_size 10K
+# </files> 
+
+# ======== Urls Rewriting =============
+RewriteEngine On
+Options +FollowSymlinks
+RewriteBase /sandbox/thefroghouse/
+
+# Rewrite urls for templates: ".../template/styles/main.css" etc.
+# RewriteRule includes/(.+)$ includes/$1 [L,NC]
+
+RewriteRule imageLoader.php$                      imageLoader.php [L,NC]
+RewriteRule ^people/?$                            index.php?mod=people&action=overview&%{QUERY_STRING} [L,NC]
+RewriteRule ^(people|users)/([^/]+)/profile.html$ index.php?mod=people&action=view&whom=$2&%{QUERY_STRING} [L,NC]
+RewriteRule ^(people)/([^/]+)/send.html$          index.php?mod=people&action=send&whom=$2 [L,NC]
+RewriteRule ^(people)/([^/]+)/kiss.html$          index.php?mod=people&action=kiss&whom=$2 [L,NC]
+RewriteRule ^(people)/([^/]+)/friend.html$        index.php?mod=people&action=friend&whom=$2 [L,NC]
+RewriteRule ^(people)/search/?$                   index.php?mod=people&action=search&%{QUERY_STRING} [L,NC]
+RewriteRule ^(people)/([^/]+)/mess_([0-9]+).html$ index.php?mod=people&action=mess&whom=$2&code=$3 [L,NC]
