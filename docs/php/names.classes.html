@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta name="generator" content="HTML Tidy for Windows (vers 1st February 2005), see www.w3.org">
+
+  <title>Имена классов</title>
+  <meta name="GENERATOR" content="Modular DocBook HTML Stylesheet Version 1.76b+">
+  <link rel="HOME" title="Стандарты оформления кода PHP" href="index.html">
+  <link rel="UP" title="Формирование имён" href="names.html">
+  <link rel="PREVIOUS" title="Выбирайте правильные имена" href="names.intro.html">
+  <link rel="NEXT" title="Имена методов" href="names.methods.html">
+<style type="text/css">
+ body {
+  background-color: #FFFFFF;
+  color: #000000;
+ }
+ :link { color: #0000FF }
+ :visited { color: #840084 }
+ :active { color: #0000FF }
+ p.c2 {font-weight: bold}
+ hr.c1 {text-align: left}
+</style>
+</head>
+
+<body class="chapter">
+  <div class="NAVHEADER">
+    <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <th colspan="3" align="center">Стандарты оформления кода PHP</th>
+      </tr>
+
+      <tr>
+        <td width="10%" align="left" valign="bottom"><a href="names.intro.html" accesskey="P">Prev</a></td>
+
+        <td width="80%" align="center" valign="bottom"></td>
+
+        <td width="10%" align="right" valign="bottom"><a href="names.methods.html" accesskey="N">Next</a></td>
+      </tr>
+    </table>
+    <hr class="c1" width="100%">
+  </div>
+
+  <div class="chapter">
+    <h1><a name="names.classes" id="names.classes">Глава 4. Имена классов</a></h1>
+
+    <p></p>
+
+    <ul>
+      <li>
+        <p>Давайте классу имя тогда, когда вы знаете, что этот класс будет делать, как и для чего. Если вы этого не знаете, то вполне возможно, вы не продумали до конца концепцию модуля;</p>
+      </li>
+
+      <li>
+        <p>Наличие имён, составленных более чем из трёх слов, может привести к тому, что система будет путать различные объекты программы. Пересмотрите код программы. Прогоните код через контроль циклически избыточного кода CRC и посмотрите, не берут ли ваши объекты на себя больше задач, чем вы планировали;</p>
+      </li>
+
+      <li>
+        <p>Не поддавайтесь искушению присвоить производному классу имя производное от имени родительского класса. Лучше будет, если класс будет жить своей жизнью, кто бы ни был его родительским классом;</p>
+      </li>
+
+      <li>
+        <p>Иногда помогают суффиксы. Например, если в вашей системе используются различные агенты, то имя типа DownloadAgent несёт достаточную смысловую нагрузку;</p>
+      </li>
+
+      <li>
+        <p>В качестве разделителей слов используйте заглавные буквы, строчные - для остальной части слов;</p>
+      </li>
+
+      <li>
+        <p>Первая буква в имени - заглавная;</p>
+      </li>
+
+      <li>
+        <p>Никаких underscore-ов (&#39;_&#39;).</p>
+      </li>
+    </ul>
+
+    <p class="keycap c2">Обоснование</p>
+
+    <p>Из всех других вариантов многие выбрали этот как лучшее компромиссное решение.</p>
+
+    <p class="keycap c2">Пример</p>
+
+    <div class="informalexample">
+      <a name="AEN102" id="AEN102"></a>
+
+      <table border="0" bgcolor="#E0E0E0" cellpadding="5">
+        <tr>
+          <td>
+            <pre class="programlisting">
+class NameOneTwo
+class Name
+</pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="NAVFOOTER">
+    <hr class="c1" width="100%">
+
+    <table summary="Footer navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="33%" align="left" valign="top"><a href="names.intro.html" accesskey="P">Prev</a></td>
+
+        <td width="34%" align="center" valign="top"><a href="index.html" accesskey="H">Home</a></td>
+
+        <td width="33%" align="right" valign="top"><a href="names.methods.html" accesskey="N">Next</a></td>
+      </tr>
+
+      <tr>
+        <td width="33%" align="left" valign="top">Выбирайте правильные имена</td>
+
+        <td width="34%" align="center" valign="top"><a href="names.html" accesskey="U">Up</a></td>
+
+        <td width="33%" align="right" valign="top">Имена методов</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

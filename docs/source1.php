@@ -1,0 +1,72 @@
+<?
+  require_once('inc/dbinit.php');
+  require_once('inc/dbpager.php');
+
+// количество выводимых записей на страницу (pager)
+
+  $limit  = 4;
+
+
+// декоратор для отображения линк-имиджа в поле таблицы
+
+  function transform_thumb($field_value) {
+    global $v;
+    $userid = substr($field_value,2,4);
+
+    return '<a href="admprofile.php?userid='.$v[id].'"><img border="0" src="'.$field_value.'"></a>';
+  }
+
+// имена таблиц и поля по которым происходит join
+
+  $table_name = 'dataadmins';
+  $table_name1 = 'jetpics';
+  $join_field = 'id';
+  $join_field1 = 'modid';
+
+// поле по умолчанию по которому ведется сортировка
+
+  $default_sort = 1;
+
+// первичный ключ первой таблицы
+
+  $primary_key = 'id';
+
+//соответсвие 
+  $field_table = array ('id'         => 'dataadmins',
+						'thumb'      => 'jetpics',
+						'screenname' => 'dataadmins',
+						'login'      => 'dataadmins',
+						'password'   => 'dataadmins',
+						'pending'    => 'dataadmins');
+
+
+
+// заголовки полей таблицы
+
+  $field_title = array ('id',
+						'thumb',
+						'screenname',
+						'email',
+						'password',
+						'pending');
+  
+// указывает на функцию-декоратор для отображения сложных типов данных (картинки, 1,0 => Yes,No итд) 
+
+  $decorator = array ('thumb'  => 'transform_thumb');
+
+// задаем ширину столбцов
+
+  $col_width = array ('60','120','140','200','120','100');
+
+
+// задаем ширину input'ов
+
+  $input_size = array ('4','0','15','14','10','2');
+
+
+//задаем флаг присутствия элементов управления сортировкой
+  $sorting = array ('1','0','1','1','1','1');
+
+
+  require_once('inc/smart_table.php');
+?>

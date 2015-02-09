@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta name="generator" content="HTML Tidy for Windows (vers 1st February 2005), see www.w3.org">
+
+  <title>Правила расстановки скобок () рядом с операторами и функциями</title>
+  <meta name="GENERATOR" content="Modular DocBook HTML Stylesheet Version 1.76b+">
+  <link rel="HOME" title="Стандарты оформления кода PHP" href="index.html">
+  <link rel="UP" title="Форматирование" href="format.html">
+  <link rel="PREVIOUS" title="Правила расстановки фигурных скобок" href="format.brackets.html">
+  <link rel="NEXT" title="Правила по отступам/табуляциям/пробелам" href="format.tabs.html">
+<style type="text/css">
+ body {
+  background-color: #FFFFFF;
+  color: #000000;
+ }
+ :link { color: #0000FF }
+ :visited { color: #840084 }
+ :active { color: #0000FF }
+ p.c2 {font-weight: bold}
+ hr.c1 {text-align: left}
+</style>
+</head>
+
+<body class="chapter">
+  <div class="NAVHEADER">
+    <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <th colspan="3" align="center">Стандарты оформления кода PHP</th>
+      </tr>
+
+      <tr>
+        <td width="10%" align="left" valign="bottom"><a href="format.brackets.html" accesskey="P">Prev</a></td>
+
+        <td width="80%" align="center" valign="bottom"></td>
+
+        <td width="10%" align="right" valign="bottom"><a href="format.tabs.html" accesskey="N">Next</a></td>
+      </tr>
+    </table>
+    <hr class="c1" width="100%">
+  </div>
+
+  <div class="chapter">
+    <h1><a name="format.parenthesis" id="format.parenthesis">Глава 13. Правила расстановки скобок () рядом с операторами и функциями</a></h1>
+
+    <p></p>
+
+    <ul>
+      <li>
+        <p>Не ставьте скобки сразу за операторами. Разделите оператор и скобки пробелом;</p>
+      </li>
+
+      <li>
+        <p>Ставьте скобки непосредственно сразу за именем функции;</p>
+      </li>
+
+      <li>
+        <p>Не используйте скобки в блоке return, если нет в этом необходимости.</p>
+      </li>
+    </ul>
+
+    <p class="keycap c2">Обоснование</p>
+
+    <p>Операторы - это не функции. Если поставить скобки сразу за оператором, функции и операторы будут выглядеть почти одинаково.</p>
+
+    <p class="keycap c2">Пример</p>
+
+    <div class="informalexample">
+      <a name="AEN268" id="AEN268"></a>
+
+      <table border="0" bgcolor="#E0E0E0" cellpadding="5">
+        <tr>
+          <td>
+            <pre class="programlisting">
+if (condition)
+{
+}
+
+while (condition)
+{
+
+}
+
+strcmp($s, $s1);
+
+return 1;
+</pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="NAVFOOTER">
+    <hr class="c1" width="100%">
+
+    <table summary="Footer navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="33%" align="left" valign="top"><a href="format.brackets.html" accesskey="P">Prev</a></td>
+
+        <td width="34%" align="center" valign="top"><a href="index.html" accesskey="H">Home</a></td>
+
+        <td width="33%" align="right" valign="top"><a href="format.tabs.html" accesskey="N">Next</a></td>
+      </tr>
+
+      <tr>
+        <td width="33%" align="left" valign="top">Правила расстановки фигурных скобок</td>
+
+        <td width="34%" align="center" valign="top"><a href="format.html" accesskey="U">Up</a></td>
+
+        <td width="33%" align="right" valign="top">Правила по отступам/табуляциям/пробелам</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

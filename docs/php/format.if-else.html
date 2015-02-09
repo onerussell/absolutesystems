@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta name="generator" content="HTML Tidy for Windows (vers 1st February 2005), see www.w3.org">
+
+  <title>Форматирование блоков if then else</title>
+  <meta name="GENERATOR" content="Modular DocBook HTML Stylesheet Version 1.76b+">
+  <link rel="HOME" title="Стандарты оформления кода PHP" href="index.html">
+  <link rel="UP" title="Форматирование" href="format.html">
+  <link rel="PREVIOUS" title="Правила по отступам/табуляциям/пробелам" href="format.tabs.html">
+  <link rel="NEXT" title="Формат switch" href="format.switch.html">
+<style type="text/css">
+ body {
+  background-color: #FFFFFF;
+  color: #000000;
+ }
+ :link { color: #0000FF }
+ :visited { color: #840084 }
+ :active { color: #0000FF }
+ p.c2 {font-weight: bold}
+ hr.c1 {text-align: left}
+</style>
+</head>
+
+<body class="chapter">
+  <div class="NAVHEADER">
+    <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <th colspan="3" align="center">Стандарты оформления кода PHP</th>
+      </tr>
+
+      <tr>
+        <td width="10%" align="left" valign="bottom"><a href="format.tabs.html" accesskey="P">Prev</a></td>
+
+        <td width="80%" align="center" valign="bottom"></td>
+
+        <td width="10%" align="right" valign="bottom"><a href="format.switch.html" accesskey="N">Next</a></td>
+      </tr>
+    </table>
+    <hr class="c1" width="100%">
+  </div>
+
+  <div class="chapter">
+    <h1><a name="format.if-else" id="format.if-else">Глава 15. Форматирование блоков if then else</a></h1>
+
+    <p class="keycap c2">Внешний вид</p>
+
+    <p>На вкус программиста. Разный стиль расстановки фигурных скобок обусловит немного разный внешний вид условных блоков. Вот один из распространённых стилей:</p>
+
+    <div class="informalexample">
+      <a name="AEN297" id="AEN297"></a>
+
+      <table border="0" bgcolor="#E0E0E0" cellpadding="5">
+        <tr>
+          <td>
+            <pre class="programlisting">
+if (condition)                 // Комментарий
+{
+}
+else if (condition)            // Комментарий
+{
+}
+else                           // Комментарий
+{
+}
+</pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <p>Если у вас в условном блоке есть else if, то стоит поставить else для всех необработанных значений. Даже если не предпринимаются никакие действия, это может быть простая запись в лог.</p>
+
+    <p class="keycap c2">Формат условия</p>
+
+    <p>При сравнении всегда ставьте константы слева. Например:</p>
+
+    <div class="informalexample">
+      <a name="AEN303" id="AEN303"></a>
+
+      <table border="0" bgcolor="#E0E0E0" cellpadding="5">
+        <tr>
+          <td>
+            <pre class="programlisting">
+if ( 6 == $errorNum ) ...
+</pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <p>Первая причина такому поведению - это то, что парсер найдёт ошибку, если вы поставите только один знак равенства (&#39;=&#39;) вместо двух. Вторая причина - при чтении кода вы находите нужное вам значение сразу в начале условия, а не ищите где-то в конце. К такому формату привыкаешь не сразу, но этот стиль действительно полезен.</p>
+  </div>
+
+  <div class="NAVFOOTER">
+    <hr class="c1" width="100%">
+
+    <table summary="Footer navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="33%" align="left" valign="top"><a href="format.tabs.html" accesskey="P">Prev</a></td>
+
+        <td width="34%" align="center" valign="top"><a href="index.html" accesskey="H">Home</a></td>
+
+        <td width="33%" align="right" valign="top"><a href="format.switch.html" accesskey="N">Next</a></td>
+      </tr>
+
+      <tr>
+        <td width="33%" align="left" valign="top">Правила по отступам/табуляциям/пробелам</td>
+
+        <td width="34%" align="center" valign="top"><a href="format.html" accesskey="U">Up</a></td>
+
+        <td width="33%" align="right" valign="top">Формат switch</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta name="generator" content="HTML Tidy for Windows (vers 1st February 2005), see www.w3.org">
+
+  <title>Имена методов</title>
+  <meta name="GENERATOR" content="Modular DocBook HTML Stylesheet Version 1.76b+">
+  <link rel="HOME" title="Стандарты оформления кода PHP" href="index.html">
+  <link rel="UP" title="Формирование имён" href="names.html">
+  <link rel="PREVIOUS" title="Имена классов" href="names.classes.html">
+  <link rel="NEXT" title="Имена аргументов в методах" href="intro.args.html">
+<style type="text/css">
+ body {
+  background-color: #FFFFFF;
+  color: #000000;
+ }
+ :link { color: #0000FF }
+ :visited { color: #840084 }
+ :active { color: #0000FF }
+ p.c2 {font-weight: bold}
+ hr.c1 {text-align: left}
+</style>
+</head>
+
+<body class="chapter">
+  <div class="NAVHEADER">
+    <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <th colspan="3" align="center">Стандарты оформления кода PHP</th>
+      </tr>
+
+      <tr>
+        <td width="10%" align="left" valign="bottom"><a href="names.classes.html" accesskey="P">Prev</a></td>
+
+        <td width="80%" align="center" valign="bottom"></td>
+
+        <td width="10%" align="right" valign="bottom"><a href="intro.args.html" accesskey="N">Next</a></td>
+      </tr>
+    </table>
+    <hr class="c1" width="100%">
+  </div>
+
+  <div class="chapter">
+    <h1><a name="names.methods" id="names.methods">Глава 5. Имена методов</a></h1>
+
+    <p>Как правило функция или метод совершают какое-либо действие, поэтому желательно, чтобы из имени было понятно, какое именно действие будет совершаться: <b class="function">CheckForErrors()</b> [ИщиОшибки()] вместо <b class="function">ErrorCheck()</b> [ПоискОшибок()]; <b class="function">DumpDataToFile()</b> [СваливайДанныеВФайл()] вместо <b class="function">DataFile()</b>[ФайлДанных()]. Кроме того, так легче будет отличить метод от класса.</p>
+
+    <p>Иногда помогают суффиксы:</p>
+
+    <ul>
+      <li>
+        <p>Max - чтобы показать максимальное значение;</p>
+      </li>
+
+      <li>
+        <p>Cnt [count: количество, подсчёт] - чтобы показать текущее значение какого-либо счётчика;</p>
+      </li>
+
+      <li>
+        <p>Key - чтобы показать ключевое значение. Например: RetryMax содержит максимальное количество возможных попыток, а RetryCnt - номер текущей попытки;</p>
+      </li>
+    </ul>
+
+    <p>Префиксы тоже иногда нелишни:</p>
+
+    <ul>
+      <li>
+        <p>Is - для обозначения вопроса. Где ни встретится вам Is, вы всегда будете знать, что это вопрос;</p>
+      </li>
+
+      <li>
+        <p>Get - получить значение;</p>
+      </li>
+
+      <li>
+        <p>Set - установить значение.</p>
+      </li>
+    </ul>Например: <b class="function">IsHitRetryLimit()</b> [примерно: это ли последняя попытка?].
+
+    <p class="keycap c2">Никаких аббревиатур заглавными буквами</p>
+
+    <p>Если в имени переменной содержится аббревиатура, лучше вместо всех заглавных оставить только первую букву заглавной, а остальные написать строчными.</p>
+
+    <p>Неправильно: <b class="function">GetHTMLStatistic()</b>.</p>
+
+    <p>Правильно: <b class="function">GetHtmlStatistic()</b>.</p>
+
+    <p class="keycap c2">Обоснование</p>
+
+    <p>При формировании имён, содержащих сокращения, люди используют свои интуитивные системы по-разному, поэтому лучше придерживаться единой стратегии формирования имён для всех случаем и добиться тем самым предсказуемости именования. Возьмём, к примеру, NetworkABCKey. Заметьте, что C от ABC и K от Key воспринимаются больше как буквенное сочетание. В принципе, некоторые не возражают против аббревиатур целиком из заглавных, другие же их просто ненавидят; так что в разным проектах люди придерживаются разных стратегий.</p>
+
+    <p class="keycap c2">Пример</p>
+
+    <div class="informalexample">
+      <a name="AEN140" id="AEN140"></a>
+
+      <table border="0" bgcolor="#E0E0E0" cellpadding="5">
+        <tr>
+          <td>
+            <pre class="programlisting">
+function FluidOz()      //а не FluidOZ
+function GetHtmlStatistic()     //а не GetHTMLStatistic    
+
+class NameOneTwo
+{
+    function DoIt() {};
+
+    function HandleError() {};
+}
+</pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="NAVFOOTER">
+    <hr class="c1" width="100%">
+
+    <table summary="Footer navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="33%" align="left" valign="top"><a href="names.classes.html" accesskey="P">Prev</a></td>
+
+        <td width="34%" align="center" valign="top"><a href="index.html" accesskey="H">Home</a></td>
+
+        <td width="33%" align="right" valign="top"><a href="intro.args.html" accesskey="N">Next</a></td>
+      </tr>
+
+      <tr>
+        <td width="33%" align="left" valign="top">Имена классов</td>
+
+        <td width="34%" align="center" valign="top"><a href="names.html" accesskey="U">Up</a></td>
+
+        <td width="33%" align="right" valign="top">Имена аргументов в методах</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

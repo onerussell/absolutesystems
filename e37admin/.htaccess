@@ -1,0 +1,4 @@
+AuthType Basic
+require valid-user
+AuthName "Protected public_html/e37admin"
+AuthUserFile "/home/engine37/.htpasswds/public_html/e37admin/passwd"

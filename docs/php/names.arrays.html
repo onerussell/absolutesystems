@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta name="generator" content="HTML Tidy for Windows (vers 1st February 2005), see www.w3.org">
+
+  <title>Имена элементов в массивах</title>
+  <meta name="GENERATOR" content="Modular DocBook HTML Stylesheet Version 1.76b+">
+  <link rel="HOME" title="Стандарты оформления кода PHP" href="index.html">
+  <link rel="UP" title="Формирование имён" href="names.html">
+  <link rel="PREVIOUS" title="Имена переменных" href="names.vars.html">
+  <link rel="NEXT" title="Одиночные и двойные кавычки" href="names.quotes.html">
+<style type="text/css">
+ body {
+  background-color: #FFFFFF;
+  color: #000000;
+ }
+ :link { color: #0000FF }
+ :visited { color: #840084 }
+ :active { color: #0000FF }
+ p.c2 {font-weight: bold}
+ hr.c1 {text-align: left}
+</style>
+</head>
+
+<body class="chapter">
+  <div class="NAVHEADER">
+    <table summary="Header navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <th colspan="3" align="center">Стандарты оформления кода PHP</th>
+      </tr>
+
+      <tr>
+        <td width="10%" align="left" valign="bottom"><a href="names.vars.html" accesskey="P">Prev</a></td>
+
+        <td width="80%" align="center" valign="bottom"></td>
+
+        <td width="10%" align="right" valign="bottom"><a href="names.quotes.html" accesskey="N">Next</a></td>
+      </tr>
+    </table>
+    <hr class="c1" width="100%">
+  </div>
+
+  <div class="chapter">
+    <h1><a name="names.arrays" id="names.arrays">Глава 8. Имена элементов в массивах</a></h1>
+
+    <p></p>
+
+    <ul>
+      <li>
+        <p>Именование элементов массивов происходит по правилам именования переменных;</p>
+      </li>
+
+      <li>
+        <p>В качестве разделителя слов используйте underscore (&#39;_&#39;);</p>
+      </li>
+
+      <li>
+        <p>И не используйте в качестве разделителя дефис (&#39;-&#39;).</p>
+      </li>
+    </ul>
+
+    <p class="keycap c2">Обоснование</p>
+
+    <p>Если в качестве разделителя используется дефис, то при включении опции Magic Quotes вы получите сообщения об ошибках.</p>
+
+    <p class="keycap c2">Пример</p>
+
+    <div class="informalexample">
+      <a name="AEN192" id="AEN192"></a>
+
+      <table border="0" bgcolor="#E0E0E0" cellpadding="5">
+        <tr>
+          <td>
+            <pre class="programlisting">
+$myarr[&#39;foo_bar&#39;] = &#39;Hello&#39;;
+print &quot;$myarr[foo_bar] world&quot;; // выведет: Hello world
+
+$myarr[&#39;foo-bar&#39;] = &#39;Hello&#39;;
+print &quot;$myarr[foo-bar] world&quot;; // получим warning
+</pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="NAVFOOTER">
+    <hr class="c1" width="100%">
+
+    <table summary="Footer navigation table" width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="33%" align="left" valign="top"><a href="names.vars.html" accesskey="P">Prev</a></td>
+
+        <td width="34%" align="center" valign="top"><a href="index.html" accesskey="H">Home</a></td>
+
+        <td width="33%" align="right" valign="top"><a href="names.quotes.html" accesskey="N">Next</a></td>
+      </tr>
+
+      <tr>
+        <td width="33%" align="left" valign="top">Имена переменных</td>
+
+        <td width="34%" align="center" valign="top"><a href="names.html" accesskey="U">Up</a></td>
+
+        <td width="33%" align="right" valign="top">Одиночные и двойные кавычки</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
