@@ -1,0 +1,102 @@
+<SCRIPT Language='Javascript'>
+var preload = new Image
+preload.src = '/img/loading.gif'
+var AutoSpinStatus = false
+var ImageArray = new Array(13)
+var ImgWidth = 300
+var ImgHeight = 450
+var intervalID 
+var intImgCount = 12
+var intImageIndex = 0
+ImageArray[0] = new Image
+ImageArray[0].src ='/armotage/360/img/1.jpg'
+ImageArray[1] = new Image
+ImageArray[1].src ='/armotage/360/img/2.jpg'
+ImageArray[2] = new Image
+ImageArray[2].src ='/armotage/360/img/3.jpg'
+ImageArray[3] = new Image
+ImageArray[3].src ='/armotage/360/img/4.jpg'
+ImageArray[4] = new Image
+ImageArray[4].src ='/armotage/360/img/5.jpg'
+ImageArray[5] = new Image
+ImageArray[5].src ='/armotage/360/img/6.jpg'
+ImageArray[6] = new Image
+ImageArray[6].src ='/armotage/360/img/7.jpg'
+ImageArray[7] = new Image
+ImageArray[7].src ='/armotage/360/img/8.jpg'
+ImageArray[8] = new Image
+ImageArray[8].src ='/armotage/360/img/9.jpg'
+ImageArray[9] = new Image
+ImageArray[9].src ='/armotage/360/img/10.jpg'
+ImageArray[10] = new Image
+ImageArray[10].src ='/armotage/360/img/11.jpg'
+ImageArray[11] = new Image
+ImageArray[11].src ='/armotage/360/img/12.jpg'
+ImageArray[12] = new Image
+ImageArray[12].src ='/armotage/360/img/13.jpg'
+
+
+function GetNext(ImgName, ImgIndex, Caller ){
+    if ( (!AutoSpinStatus) || (Caller == 1)){ 
+        document.images[ImgName].src = ImageArray[ImgIndex].src
+    }
+}
+function ToggleSpin(){
+    if (document.autospin.changestate.value == 'Turn Auto-Spin ON'){
+        GetNext('3DImg', 0, 0)
+        intervalID = setInterval('AutoSpin()',200 )
+        document.autospin.changestate.value = 'Turn Auto-Spin OFF'
+        AutoSpinStatus = true
+    }else{
+        AutoSpinStatus = false
+        clearInterval(intervalID)
+        document.autospin.changestate.value = 'Turn Auto-Spin ON'
+        GetNext('3DImg', 0, 0)
+    }
+}	
+function AutoSpin(){
+   	if (intImageIndex >= intImgCount){
+   		intImageIndex = 1
+   	}else{
+   		++intImageIndex
+   	}
+   	GetNext('3DImg', intImageIndex, 1)
+}
+function onBodyLoad(){
+ 	GetNext('3DImg', 0, 0)
+}
+</script>
+<map NAME='3DMap'>
+<area SHAPE='Rect' COORDS='0,0,21,340' OnMouseOver="GetNext('3DImg',0, 0)">
+<area SHAPE='Rect' COORDS='22,0,43,340' OnMouseOver="GetNext('3DImg',1, 0)">
+<area SHAPE='Rect' COORDS='44,0,65,340' OnMouseOver="GetNext('3DImg',2, 0)">
+<area SHAPE='Rect' COORDS='66,0,87,340' OnMouseOver="GetNext('3DImg',3, 0)">
+<area SHAPE='Rect' COORDS='88,0,109,340' OnMouseOver="GetNext('3DImg',4, 0)">
+<area SHAPE='Rect' COORDS='110,0,131,340' OnMouseOver="GetNext('3DImg',5, 0)">
+<area SHAPE='Rect' COORDS='132,0,153,340' OnMouseOver="GetNext('3DImg',6, 0)">
+<area SHAPE='Rect' COORDS='154,0,175,340' OnMouseOver="GetNext('3DImg',7, 0)">
+<area SHAPE='Rect' COORDS='176,0,197,340' OnMouseOver="GetNext('3DImg',8, 0)">
+<area SHAPE='Rect' COORDS='198,0,219,340' OnMouseOver="GetNext('3DImg',9, 0)">
+<area SHAPE='Rect' COORDS='220,0,241,340' OnMouseOver="GetNext('3DImg',10, 0)">
+<area SHAPE='Rect' COORDS='242,0,263,340' OnMouseOver="GetNext('3DImg',11, 0)">
+<area SHAPE='Rect' COORDS='264,0,285,340' OnMouseOver="GetNext('3DImg',12, 0)">
+
+
+</map>
+</head>
+
+<body onLoad="onBodyLoad()"> 
+
+
+<br><br><br><br>
+<table width="100%">
+	<form name="autospin" method="post">
+	<tr>
+	<td align="center"><img name="3DImg" SRC="/CommonLib/Imgs/loading.gif" ISMAP USEMAP="#3DMap" Border=0 ></td>
+	</tr>
+	<tr>
+	<td align="center"><input type="button" name="changestate" value="Turn Auto-Spin ON" onClick="ToggleSpin()"></td>
+	</tr>
+	</form>
+</table>
+

@@ -1,0 +1,23 @@
+A:link {
+	COLOR: #2B5F99
+}
+A.menu:link {
+	COLOR: #FF0000
+}
+A:active {
+	COLOR: #2B5F99
+}
+A:visited {
+	COLOR: #2B5F99
+}
+A:hover {
+	COLOR: #7196C0; TEXT-DECORATION: underline
+}
+
+.text {font-family: arial,geneva,sans-serif; font-size: 9pt}
+.text-dp {font-family: arial,geneva,sans-serif; font-size: 9pt; text-indent: 20}
+.menu{font: bold 12px Tahoma, Arial; color: #000000; text-decoration: none}
+.hint{ font: 11px Tahoma, Arial; color: #000000; text-decoration: none}
+TD {font-family: arial,geneva,sans-serif; font-size: 9pt}
+ul {font-family: arial,geneva,sans-serif; font-size: 9pt; margin-bottom: 0; line-height: 150%}
+blockquote   {font-family: arial,geneva,sans-serif; font-size: 9pt; margin-top: 7; margin-bottom: 7}
