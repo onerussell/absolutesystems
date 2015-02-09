@@ -1,0 +1,120 @@
+html, body, div, img, ol, ul, li, dl, dt, dd, h1, h2, h3, p, form, input, select, textarea {margin: 0; padding: 0;}
+
+body, html {width: 100%;}
+body {background: #ffffff; min-width: 770px; text-align: center;}
+body, div {font: 11px Verdana, Tahoma, Arial, sans-serif; color: #8E8E8E;}
+
+input {font: 10px Verdana, Tahoma, Arial, sans-serif; padding: 1px 3px 2px 3px;}
+
+h1 {font: bold 14px 'Arial Narrow', Arial, sans-serif; padding: 10px 0;}
+
+a img, img {border: none;}
+
+a:link, a:active, a:visited {color: #234B81; text-decoration: underline;}
+a:hover {color: #234B81; text-decoration: none;}
+
+.spacer {font-size: 1px; height: 1px; clear: both;}
+
+.container {width: 770px; position: relative; margin: 0 auto; text-align: left;}
+
+.top-line, .top-link, .logoheader, .top-menu, .middlebox, .razdel-title, .copyright, .middlesec {width: 100%;}
+
+.top-line {height: 3px; background: #234B81;}
+.top-link {height: 32px;}
+.top-link span {display: block; float: right; text-align: right; padding: 14px 19px 0 0;}
+.top-link span a {display: block; padding-left: 12px; margin-left: 19px; float: left; background: url('imgs/bg-top-link.gif') 0 5px no-repeat; font-family: Arial;}
+
+.logoheader {height: 54px; position: relative;}
+.logoheader .logo {padding: 0 0 0 19px; float: left;}
+.logoheader .search {float: right; text-align: right; padding: 12px 20px 0 0; position: absolute; top: 0; right: 0;}
+.logoheader .search label { margin-right: 121px;}
+.logoheader .search .form {width: 158px; text-align: left; position: relative;}
+.logoheader .search .f-reg {float: left; width: 129px;}
+.logoheader .search .f-but {float: right; width: 19px; position: absolute; top: 0; right: 0;}
+.logoheader input {width: 129px; background: #EEF0F3; border: 1px solid #989EAA; margin-top: 3px;}
+
+.top-menu {height: 40px; background: #63686E url('imgs/bg-top-menu.gif') bottom left repeat-x;}
+ul#menu-t li {display: block; float: left; list-style: none; padding: 12px 19px 0 14px;}
+ul#menu-t li.on {background: #2D507E url('imgs/bg-top-menu-on.gif') bottom left repeat-x; padding-right: 32px;}
+ul#menu-t li a {display: block; background: url('imgs/bg-top-link.gif') 0 12px no-repeat; padding-left: 14px;}
+ul#menu-t li.on a {background: url('imgs/bg-top-link-on.gif') 0 12px no-repeat;}
+
+.middlebox {height: 197px;}
+.middlebox .left {width: 254px; float: left; border-top: 1px solid #ffffff; background: #F6F6F6; border-bottom: 1px solid #E6E6E8; height: 195px;}
+.middlebox .left div {height: 65px; background: url('imgs/bg-middle-div.gif') no-repeat;}
+.middlebox .left .mid {border-top: 1px solid #E0E0E0; border-bottom: 1px solid #E0E0E0;}
+.middlebox .left div span {display: block; padding: 13px 10px 0 40px; color: #234B81; line-height: 13px;}
+.middlebox .main-promo {width: 516px; float: left;}
+
+.slogan-pic {height: 92px; background: url('imgs/bg-slogan.gif') repeat-y; width: 100%;}
+.slogan-pic div {float: right; width: 516px; text-align: center; margin-top: 29px;}
+
+.razdel-title {height: 38px; border-top: 1px solid #E6E6E8; border-bottom: 1px solid #E6E6E8;}
+.razdel-title div {float: left; width: 255px;}
+.razdel-title div.bg {background: url('imgs/bg-div.gif') top right no-repeat;}
+.razdel-title div span {display: block; color: #234B81; font-size: 10px; padding: 6px 0 0 40px; background: url('imgs/bg-divs.gif') no-repeat;}
+
+.razdel-img {width: 100%;}
+.razdel-img .part {float: left; width: 255px;}
+.razdel-img .part .pad .bg {background: url('imgs/bg-pad.gif') top right no-repeat; padding-right: 12px;}
+.razdel-img .part .pad {padding: 13px 0 14px 18px; font-size: 10px; line-height: 13px; text-align: justify;}
+.razdel-img .part .pad .img {margin-bottom: 10px;}
+
+div.link {border-left: 2px solid #D6D7D9; padding: 1px 13px 2px 11px; margin: 12px 0 4px 0; background: url('imgs/bg-part-link.gif') 0 6px no-repeat;}
+div.link a {font-size: 10px;}
+
+.b-line {background: #E6E6E8;}
+
+.copyright .partner {width: 255px; float: left; border-right: 1px solid #D6D7D9;}
+.copyright .partner img {margin: 13px 0 18px 30px;}
+.copyright .info {float: left; width: 514px; position: relative;}
+.copyright .info .contact {padding: 7px 0 0 22px; font-size: 10px; line-height: 13px;}
+.copyright .info .privacy {float: right; font-size: 10px; line-height: 13px; position: absolute; top: 15px; right: 15px;}
+.copyright .info .contact a {font-size: 11px;}
+.copyright .info .contact a, .copyright .info .privacy a {font-family: Arial;}
+
+ul#menu-b {padding-left: 35px;}
+ul#menu-b li {display: block; float: left; list-style: none; padding: 0 25px; border-right: 1px solid #E6E6E8;}
+ul#menu-b li.last {border-right: none;}
+
+.s20 {height: 20px;}
+.s14 {height: 14px;}
+.s9 {height: 9px;}
+.s7 {height: 7px;}
+.s3 {height: 3px;}
+
+/* second page */
+
+.middlesec {background: url('imgs/bg-contents.gif') 186px 0 repeat-y; width: 100%; position: relative;}
+.middlesecs {background: url('imgs/bg-content.gif') 595px 0 repeat-y; width: 100%; position: relative;}
+
+.sec-menu {width: 186px; float: left;}
+.contentpart {width: 409px; float: left;}
+.rightcolumn {width: 175px; float: left;}
+
+.sec-menu dl {font-size: 10px; color: #707072; padding: 8px 0 0 15px;}
+.sec-menu dl dt {padding: 2px 12px; background: url('imgs/bg-dt-on.gif') 0 6px no-repeat; margin: 2px 0;}
+.sec-menu dl dd {padding: 2px 16px; background: url('imgs/bg-dd-on.gif') 6px 7px no-repeat; margin: 2px 0 2px 7px;}
+.sec-menu dl dd.on {padding: 0; margin: 0 0 0 7px;}
+.sec-menu dl dd.on span {background: #ECECEE; display: inline; padding: 0 6px 1px 6px;}
+.sec-menu dl dd.on span span {background: url('imgs/bg-dd-on.gif') 0px 6px no-repeat; padding: 0 0 0 10px;}
+
+.path {height: 42px; border-bottom: 1px solid #E7E7E7;}
+.path div {padding: 16px 20px 0 20px; color: #6C6C6C; font-size: 10px;}
+.path div span {margin: 0 10px; color: #363636;}
+
+.contentpad {font-size: 10px; text-align: justify; padding: 0 17px 20px 17px;}
+.contentpad p {margin: 8px 0 0 0;}
+
+h1.title {padding-left: 25px; background: url('imgs/bg-divss.gif') 0px 12px no-repeat;}
+
+.printpage {text-align: right; font-size: 10px; padding: 5px 22px 5px 0; margin: 25px 10px 0 0; background: url('imgs/i-print.gif') right no-repeat;}
+
+.r-sec {display: block; color: #234B81; font-size: 10px; padding: 6px 0 6px 32px; background: url('imgs/bg-dib.gif') 0 7px no-repeat;}
+.rightpad {padding: 10px 15px 10px 8px;}
+.rightpad .r-sec {padding-right: 0; padding-left: 24px; background: url('imgs/bg-divss.gif') 2px 8px no-repeat;}
+.rightpad .text {text-align: justify; font-size: 10px; padding: 2px 0 0 10px;}
+.rightpad .link {margin-left: 10px;}
+
+.copyright .partners {width: 187px;}
+.copyright .infos {width: 582px;}
