@@ -1,0 +1,38 @@
+TD {COLOR: #000000; FONT-FAMILY: Verdana; FONT-SIZE: 11px; TEXT-DECORATION: none; FONT-WEIGHT: normal; }
+
+.phone1 {COLOR: #6A949A; FONT-FAMILY: Verdana; FONT-SIZE: 11px; FONT-WEIGHT: bold; }
+.phone2 {COLOR: #89AFB4; FONT-FAMILY: Verdana; FONT-SIZE: 11px; FONT-WEIGHT: bold; }
+
+.slogan {COLOR: #B3DFE7; FONT-FAMILY: Verdana; FONT-SIZE: 10px; FONT-WEIGHT: bold; LETTER-SPACING: 1px;}
+.copy {COLOR: #333333; FONT-FAMILY: Verdana; FONT-SIZE: 9px; FONT-WEIGHT: normal;}
+.nav {COLOR: #FFFFFF; FONT-FAMILY: Verdana; FONT-SIZE: 10px; FONT-WEIGHT: bold;}
+A.nav:hover {COLOR: #CFDFDF; FONT-FAMILY: Verdana; FONT-SIZE: 10px; FONT-WEIGHT: bold;}
+
+.zag { COLOR: #C05661; FONT-FAMILY: Verdana; FONT-SIZE: 12px; FONT-WEIGHT: bold;}
+
+.med { FONT-FAMILY: Verdana; FONT-SIZE: 10px;}
+.bold { COLOR: #327590; FONT-FAMILY: Verdana; FONT-SIZE: 11px; FONT-WEIGHT: bold;}
+
+.mini {COLOR: #173A5A; FONT-FAMILY: Verdana; FONT-SIZE: 9px;}
+A.mini:hover { COLOR: #552233; }
+
+.midi {COLOR: #554433; FONT-FAMILY: Verdana; FONT-SIZE: 9px;}
+A.midi:hover { COLOR: #000000; }
+
+.mini2 {COLOR: #99CCFF; FONT-FAMILY: Verdana; FONT-SIZE: 9px;}
+A.mini2:hover { COLOR: #FFFFFF; }
+
+.zag_st { COLOR: #DDDDDD; FONT-FAMILY: Verdana; FONT-SIZE: 10px; FONT-WEIGHT: bold;}
+A.zag_st:hover { COLOR: #FFFFFF; }
+
+.nl { COLOR: #FFFFFF; FONT-FAMILY: Verdana; FONT-SIZE: 10px; FONT-WEIGHT: bold;}
+.tw { COLOR: #FFFFFF; FONT-FAMILY: Verdana; FONT-SIZE: 10px; }
+
+.nl1 { COLOR: #343434; FONT-FAMILY: Verdana; FONT-SIZE: 10px; FONT-WEIGHT: bold;}
+.nl2 { COLOR: #dedede; FONT-FAMILY: Verdana; FONT-SIZE: 10px; FONT-WEIGHT: bold;}
+.nl3 { COLOR: #C0686D; FONT-FAMILY: Verdana; FONT-SIZE: 10px; FONT-WEIGHT: bold;}
+.nl4 { COLOR: #6C799F; FONT-FAMILY: Verdana; FONT-SIZE: 10px; FONT-WEIGHT: bold;}
+.sep { COLOR: #6C799F; FONT-FAMILY: Verdana; FONT-SIZE: 10px; }
+
+A { COLOR: #173A5A; FONT-WEIGHT: normal; TEXT-DECORATION: underline;}
+A:hover { COLOR: #995577;}

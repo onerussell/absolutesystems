@@ -1,0 +1,17 @@
+<?xml version="1.0" ?> <root>
+  <data id="Sun" degree="178.64" /> 
+  <data id="Moon" degree="63.70" /> 
+  <data id="Mercury" degree="171.33" /> 
+  <data id="Venus" degree="222.04" /> 
+  <data id="Mars" degree="211.43" /> 
+  <data id="Jupiter" degree="123.00" /> 
+  <data id="Saturn" degree="157.15" /> 
+  <data id="Uranus" degree="223.93" /> 
+  <data id="Neptune" degree="255.72" /> 
+  <data id="Pluto" degree="195.89" /> 
+  <data id="mean Node" degree="176.57" /> 
+  <data id="true Node" degree="176.74" /> 
+  <data id="mean Apogee" degree="117.68" /> 
+  <data id="osc. Apogee" degree="120.29" /> 
+  <data id="Chiron" degree="39.09" /> 
+  </root>

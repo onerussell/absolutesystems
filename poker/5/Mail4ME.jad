@@ -1,0 +1,7 @@
+MIDlet-1: Mail4ME, , de.trantor.mail.demo.j2me.MailMIDlet
+MIDlet-Jar-Size: 31064
+MIDlet-Jar-URL: http://www.engine37.com/poker/5/Mail4ME.jar
+MIDlet-Name: Mail4ME
+MIDlet-Vendor: Sun Microsystems
+MIDlet-Version: 1.14
+iDEN-Install-Class-2: de.trantor.mail.j2me.ConnectionImpl

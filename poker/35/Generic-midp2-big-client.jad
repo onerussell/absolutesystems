@@ -1,0 +1,13 @@
+MIDlet-Name: Mobile Poker
+MIDlet-Version: 1.0
+MIDlet-Vendor: PelMiKo
+MIDlet-Jar-URL: http://www.engine37.com/poker/35/Generic-midp2-big-client.jar
+MIDlet-Jar-Size: 260441
+MIDlet-Description: Mobile network Texas Hold'em Poker
+MIDlet-Icon: /icon.png
+MIDlet-1: Poker,/icon.png,ru.poker.client.PokerMIDlet
+MIDlet-Delete-Confirm: Do you really want to delete Mobile Poker?
+Game-Server: 69.13.230.17:15000
+LLA-Font1: times11blk.bmf
+LLA-Font2: times11ora.bmf
+LLA-Font3: times11wht.bmf

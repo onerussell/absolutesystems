@@ -1,0 +1,777 @@
+2005-10-08 00:19:30,286 DEBUG - Checking start
+2005-10-08 00:19:30,328 DEBUG - Checking finished
+2005-10-08 01:19:30,336 DEBUG - Checking start
+2005-10-08 01:19:30,336 DEBUG - Checking finished
+2005-10-08 02:19:30,346 DEBUG - Checking start
+2005-10-08 02:19:30,346 DEBUG - Checking finished
+2005-10-08 03:19:30,356 DEBUG - Checking start
+2005-10-08 03:19:30,356 DEBUG - Checking finished
+2005-10-08 03:23:28,642 INFO - SocketListener start. Remoute address = /68.26.116.250:32786
+2005-10-08 03:23:28,642 INFO - add connection: ru.poker.server.net.core.ConnectionImpl@1fae3c6
+2005-10-08 03:23:28,642 DEBUG - New connection accepted
+2005-10-08 03:23:31,401 DEBUG -  recieve; request:Instruction command = rqLogin arg = ALEX arg = 123
+2005-10-08 03:23:31,402 INFO - authorize user login: ALEX pwd: 123
+2005-10-08 03:23:31,402 DEBUG - Player id:2 recieve; request:Instruction command = rqLogin arg = ALEX arg = 123 send; response:Instruction command = rsLogin arg = ack
+2005-10-08 03:23:32,926 DEBUG - Player id:2 recieve; request:Instruction command = rqProfile arg = ALEX
+2005-10-08 03:23:32,926 DEBUG - Player id:2 recieve; request:Instruction command = rqProfile arg = ALEX send; response:Instruction command = rsProfile arg = 1000 arg = 1 arg = 0
+2005-10-08 03:23:35,504 DEBUG - Player id:2 recieve; request:Instruction command = rqRooms
+2005-10-08 03:23:35,505 DEBUG - Player id:2 recieve; request:Instruction command = rqRooms send; response:Instruction command = rsRooms arg = 5 arg = Room 5 arg = 10 arg = 20 arg = 4 arg = Room 4 arg = 8 arg = 16 arg = 3 arg = Room 3 arg = 6 arg = 12 arg = 2 arg = Room 2 arg = 4 arg = 8 arg = 1 arg = Room 1 arg = 2 arg = 4
+2005-10-08 03:23:38,046 DEBUG - Player id:2 recieve; request:Instruction command = rqTables arg = 5
+2005-10-08 03:23:38,046 DEBUG - Player id:2 recieve; request:Instruction command = rqTables arg = 5 send; response:Instruction command = rsTables arg = 4 arg = 0
+2005-10-08 03:23:40,323 DEBUG - Player id:2 recieve; request:Instruction command = rqTableFull arg = 4
+2005-10-08 03:23:40,323 DEBUG - Player id:2 recieve; request:Instruction command = rqTableFull arg = 4 send; response:Instruction command = rsTableFull
+2005-10-08 03:23:51,536 DEBUG - Player id:2 recieve; request:Instruction command = rqJoinTable arg = 4 arg = 1
+2005-10-08 03:23:51,536 DEBUG - table id:4 player: 2 seatId: 1 registered
+2005-10-08 03:23:51,537 DEBUG - player id:2 send; request:Instruction command = rqPlayerIn arg = 1 arg = alex arg = 1000 arg = 1 arg = 0
+2005-10-08 03:23:51,537 DEBUG - table id: 4 notify player id: 2
+2005-10-08 03:23:51,537 DEBUG - Player id:2 recieve; request:Instruction command = rqJoinTable arg = 4 arg = 1 send; response:Instruction command = rsJoinTable arg = ack
+2005-10-08 03:23:52,556 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerIn
+2005-10-08 03:23:52,556 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerIn
+2005-10-08 03:24:04,943 DEBUG - Player id:2 recieve; request:Instruction command = rqPlayerOut arg = 1
+2005-10-08 03:24:04,943 DEBUG - table id:4 player: 2 seatId: 1 unregistered
+2005-10-08 03:24:04,943 DEBUG - Player id:2 recieve; request:Instruction command = rqPlayerOut arg = 1
+2005-10-08 03:24:05,446 DEBUG - Player id:2 recieve; request:Instruction command = rqGameOver
+2005-10-08 03:24:05,446 INFO - remove connection: ru.poker.server.net.core.ConnectionImpl@1fae3c6
+2005-10-08 03:24:05,446 INFO - Connection close
+2005-10-08 03:24:05,446 DEBUG - Player id:2 recieve; request:Instruction command = rqGameOver
+2005-10-08 04:19:30,366 DEBUG - Checking start
+2005-10-08 04:19:30,366 DEBUG - Checking finished
+2005-10-08 05:19:30,376 DEBUG - Checking start
+2005-10-08 05:19:30,376 DEBUG - Checking finished
+2005-10-08 06:19:30,386 DEBUG - Checking start
+2005-10-08 06:19:30,386 DEBUG - Checking finished
+2005-10-08 07:19:30,396 DEBUG - Checking start
+2005-10-08 07:19:30,396 DEBUG - Checking finished
+2005-10-08 08:19:30,406 DEBUG - Checking start
+2005-10-08 08:19:30,406 DEBUG - Checking finished
+2005-10-08 09:19:30,416 DEBUG - Checking start
+2005-10-08 09:19:30,416 DEBUG - Checking finished
+2005-10-08 10:19:30,426 DEBUG - Checking start
+2005-10-08 10:19:30,426 DEBUG - Checking finished
+2005-10-08 11:19:30,436 DEBUG - Checking start
+2005-10-08 11:19:30,436 DEBUG - Checking finished
+2005-10-08 12:19:30,446 DEBUG - Checking start
+2005-10-08 12:19:30,446 DEBUG - Checking finished
+2005-10-08 13:19:30,456 DEBUG - Checking start
+2005-10-08 13:19:30,457 DEBUG - Checking finished
+2005-10-08 14:19:30,466 DEBUG - Checking start
+2005-10-08 14:19:30,466 DEBUG - Checking finished
+2005-10-08 15:19:30,476 DEBUG - Checking start
+2005-10-08 15:19:30,476 DEBUG - Checking finished
+2005-10-08 16:19:30,486 DEBUG - Checking start
+2005-10-08 16:19:30,486 DEBUG - Checking finished
+2005-10-08 17:19:30,496 DEBUG - Checking start
+2005-10-08 17:19:30,496 DEBUG - Checking finished
+2005-10-08 18:19:30,506 DEBUG - Checking start
+2005-10-08 18:19:30,506 DEBUG - Checking finished
+2005-10-08 19:19:30,516 DEBUG - Checking start
+2005-10-08 19:19:30,516 DEBUG - Checking finished
+2005-10-08 20:07:42,001 INFO - SocketListener start. Remoute address = /70.0.24.67:32789
+2005-10-08 20:07:42,001 INFO - add connection: ru.poker.server.net.core.ConnectionImpl@fd13b5
+2005-10-08 20:07:42,002 DEBUG - New connection accepted
+2005-10-08 20:07:45,056 DEBUG -  recieve; request:Instruction command = rqLogin arg = ALEX arg = 123
+2005-10-08 20:07:45,056 INFO - authorize user login: ALEX pwd: 123
+2005-10-08 20:07:45,057 DEBUG - Player id:2 recieve; request:Instruction command = rqLogin arg = ALEX arg = 123 send; response:Instruction command = rsLogin arg = ack
+2005-10-08 20:07:46,125 DEBUG - Player id:2 recieve; request:Instruction command = rqProfile arg = ALEX
+2005-10-08 20:07:46,125 DEBUG - Player id:2 recieve; request:Instruction command = rqProfile arg = ALEX send; response:Instruction command = rsProfile arg = 1000 arg = 1 arg = 0
+2005-10-08 20:07:54,544 DEBUG - Player id:2 recieve; request:Instruction command = rqRooms
+2005-10-08 20:07:54,544 DEBUG - Player id:2 recieve; request:Instruction command = rqRooms send; response:Instruction command = rsRooms arg = 5 arg = Room 5 arg = 10 arg = 20 arg = 4 arg = Room 4 arg = 8 arg = 16 arg = 3 arg = Room 3 arg = 6 arg = 12 arg = 2 arg = Room 2 arg = 4 arg = 8 arg = 1 arg = Room 1 arg = 2 arg = 4
+2005-10-08 20:08:07,796 DEBUG - Player id:2 recieve; request:Instruction command = rqTables arg = 5
+2005-10-08 20:08:07,796 DEBUG - Player id:2 recieve; request:Instruction command = rqTables arg = 5 send; response:Instruction command = rsTables arg = 4 arg = 0
+2005-10-08 20:08:10,958 DEBUG - Player id:2 recieve; request:Instruction command = rqGameOver
+2005-10-08 20:08:10,958 INFO - remove connection: ru.poker.server.net.core.ConnectionImpl@fd13b5
+2005-10-08 20:08:10,958 INFO - Connection close
+2005-10-08 20:08:10,959 DEBUG - Player id:2 recieve; request:Instruction command = rqGameOver
+2005-10-08 20:19:30,526 DEBUG - Checking start
+2005-10-08 20:19:30,526 DEBUG - Checking finished
+2005-10-08 21:15:41,650 INFO - SocketListener start. Remoute address = /68.26.15.6:32799
+2005-10-08 21:15:41,650 INFO - add connection: ru.poker.server.net.core.ConnectionImpl@118f375
+2005-10-08 21:15:41,650 DEBUG - New connection accepted
+2005-10-08 21:16:43,171 DEBUG -  recieve; request:Instruction command = rqLogin arg = smith arg = 123
+2005-10-08 21:16:43,171 INFO - authorize user login: smith pwd: 123
+2005-10-08 21:16:43,171 DEBUG - Player id:3 recieve; request:Instruction command = rqLogin arg = smith arg = 123 send; response:Instruction command = rsLogin arg = ack
+2005-10-08 21:16:45,411 DEBUG - Player id:3 recieve; request:Instruction command = rqProfile arg = smith
+2005-10-08 21:16:45,411 DEBUG - Player id:3 recieve; request:Instruction command = rqProfile arg = smith send; response:Instruction command = rsProfile arg = 1000 arg = 3 arg = 2
+2005-10-08 21:16:50,585 DEBUG - Player id:3 recieve; request:Instruction command = rqRooms
+2005-10-08 21:16:50,586 DEBUG - Player id:3 recieve; request:Instruction command = rqRooms send; response:Instruction command = rsRooms arg = 5 arg = Room 5 arg = 10 arg = 20 arg = 4 arg = Room 4 arg = 8 arg = 16 arg = 3 arg = Room 3 arg = 6 arg = 12 arg = 2 arg = Room 2 arg = 4 arg = 8 arg = 1 arg = Room 1 arg = 2 arg = 4
+2005-10-08 21:16:54,167 DEBUG - Player id:3 recieve; request:Instruction command = rqTables arg = 5
+2005-10-08 21:16:54,168 DEBUG - Player id:3 recieve; request:Instruction command = rqTables arg = 5 send; response:Instruction command = rsTables arg = 4 arg = 0
+2005-10-08 21:16:57,450 DEBUG - Player id:3 recieve; request:Instruction command = rqTableFull arg = 4
+2005-10-08 21:16:57,450 DEBUG - Player id:3 recieve; request:Instruction command = rqTableFull arg = 4 send; response:Instruction command = rsTableFull
+2005-10-08 21:17:08,226 DEBUG - Player id:3 recieve; request:Instruction command = rqJoinTable arg = 4 arg = 0
+2005-10-08 21:17:08,227 DEBUG - table id:4 player: 3 seatId: 0 registered
+2005-10-08 21:17:08,227 DEBUG - player id:3 send; request:Instruction command = rqPlayerIn arg = 0 arg = smith arg = 1000 arg = 3 arg = 2
+2005-10-08 21:17:08,227 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:17:08,227 DEBUG - Player id:3 recieve; request:Instruction command = rqJoinTable arg = 4 arg = 0 send; response:Instruction command = rsJoinTable arg = ack
+2005-10-08 21:17:10,627 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerIn
+2005-10-08 21:17:10,627 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerIn
+2005-10-08 21:17:13,141 INFO - SocketListener start. Remoute address = /68.26.39.81:32791
+2005-10-08 21:17:13,141 INFO - add connection: ru.poker.server.net.core.ConnectionImpl@471e30
+2005-10-08 21:17:13,142 DEBUG - New connection accepted
+2005-10-08 21:17:15,843 DEBUG -  recieve; request:Instruction command = rqLogin arg = ALEX arg = 123
+2005-10-08 21:17:15,843 INFO - authorize user login: ALEX pwd: 123
+2005-10-08 21:17:15,843 DEBUG - Player id:2 recieve; request:Instruction command = rqLogin arg = ALEX arg = 123 send; response:Instruction command = rsLogin arg = ack
+2005-10-08 21:17:17,366 DEBUG - Player id:2 recieve; request:Instruction command = rqProfile arg = ALEX
+2005-10-08 21:17:17,366 DEBUG - Player id:2 recieve; request:Instruction command = rqProfile arg = ALEX send; response:Instruction command = rsProfile arg = 1000 arg = 1 arg = 0
+2005-10-08 21:17:19,916 DEBUG - Player id:2 recieve; request:Instruction command = rqRooms
+2005-10-08 21:17:19,916 DEBUG - Player id:2 recieve; request:Instruction command = rqRooms send; response:Instruction command = rsRooms arg = 5 arg = Room 5 arg = 10 arg = 20 arg = 4 arg = Room 4 arg = 8 arg = 16 arg = 3 arg = Room 3 arg = 6 arg = 12 arg = 2 arg = Room 2 arg = 4 arg = 8 arg = 1 arg = Room 1 arg = 2 arg = 4
+2005-10-08 21:17:22,176 DEBUG - Player id:2 recieve; request:Instruction command = rqTables arg = 5
+2005-10-08 21:17:22,176 DEBUG - Player id:2 recieve; request:Instruction command = rqTables arg = 5 send; response:Instruction command = rsTables arg = 4 arg = 1
+2005-10-08 21:17:24,216 DEBUG - Player id:2 recieve; request:Instruction command = rqTableFull arg = 4
+2005-10-08 21:17:24,216 DEBUG - Player id:2 recieve; request:Instruction command = rqTableFull arg = 4 send; response:Instruction command = rsTableFull arg = smith arg = 1000 arg = 0 arg = 3 arg = 2
+2005-10-08 21:17:30,336 DEBUG - Player id:2 recieve; request:Instruction command = rqJoinTable arg = 4 arg = 1
+2005-10-08 21:17:30,336 DEBUG - table id:4 player: 2 seatId: 1 registered
+2005-10-08 21:17:30,337 DEBUG - player id:2 send; request:Instruction command = rqPlayerIn arg = 1 arg = alex arg = 1000 arg = 1 arg = 0
+2005-10-08 21:17:30,337 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:17:30,337 DEBUG - player id:3 send; request:Instruction command = rqPlayerIn arg = 1 arg = alex arg = 1000 arg = 1 arg = 0
+2005-10-08 21:17:30,337 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:17:30,337 DEBUG - Player id:2 recieve; request:Instruction command = rqJoinTable arg = 4 arg = 1 send; response:Instruction command = rsJoinTable arg = ack
+2005-10-08 21:17:30,337 INFO - table id:4 start game
+2005-10-08 21:17:30,337 DEBUG - table id:4 start new round
+2005-10-08 21:17:30,337 DEBUG - player id:2 send; request:Instruction command = rqStartRound
+2005-10-08 21:17:30,337 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:17:30,337 DEBUG - player id:3 send; request:Instruction command = rqStartRound
+2005-10-08 21:17:30,337 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:17:31,356 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerIn
+2005-10-08 21:17:31,356 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerIn
+2005-10-08 21:17:32,105 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerIn
+2005-10-08 21:17:32,105 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerIn
+2005-10-08 21:17:36,263 DEBUG - Player id:3 recieve; request:Instruction command = rsStartRound arg = ack
+2005-10-08 21:17:36,263 DEBUG - Player id:3 recieve; request:Instruction command = rsStartRound arg = ack
+2005-10-08 21:17:38,298 DEBUG - Player id:2 recieve; request:Instruction command = rsStartRound arg = ack
+2005-10-08 21:17:38,298 DEBUG - Player id:2 recieve; request:Instruction command = rsStartRound arg = ack
+2005-10-08 21:17:38,299 DEBUG - player id:2 send; request:Instruction command = rqTableFull arg = alex arg = 1000 arg = 1 arg = 1 arg = 0 arg = smith arg = 1000 arg = 0 arg = 3 arg = 2
+2005-10-08 21:17:38,299 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:17:38,299 DEBUG - player id:3 send; request:Instruction command = rqTableFull arg = alex arg = 1000 arg = 1 arg = 1 arg = 0 arg = smith arg = 1000 arg = 0 arg = 3 arg = 2
+2005-10-08 21:17:38,299 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:17:40,139 DEBUG - Player id:2 recieve; request:Instruction command = rsTableFull
+2005-10-08 21:17:40,139 DEBUG - Player id:2 recieve; request:Instruction command = rsTableFull
+2005-10-08 21:17:40,184 DEBUG - Player id:3 recieve; request:Instruction command = rsTableFull
+2005-10-08 21:17:40,184 DEBUG - Player id:3 recieve; request:Instruction command = rsTableFull
+2005-10-08 21:17:40,306 DEBUG - player id:2 send; request:Instruction command = rqSmallBlind arg = 0
+2005-10-08 21:17:40,306 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:17:40,306 DEBUG - player id:3 send; request:Instruction command = rqSmallBlind arg = 0
+2005-10-08 21:17:40,306 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:17:41,357 DEBUG - Player id:2 recieve; request:Instruction command = rsSmallBlind
+2005-10-08 21:17:41,357 DEBUG - Player id:2 recieve; request:Instruction command = rsSmallBlind
+2005-10-08 21:17:42,316 DEBUG - table id:4 pocket card player id:2
+2005-10-08 21:17:42,316 DEBUG - table id:4 pocket card player id:3
+2005-10-08 21:17:42,451 DEBUG - Player id:3 recieve; request:Instruction command = rsSmallBlind
+2005-10-08 21:17:42,451 DEBUG - Player id:3 recieve; request:Instruction command = rsSmallBlind
+2005-10-08 21:17:43,561 DEBUG - Player id:2 recieve; request:Instruction command = rsPocketCards
+2005-10-08 21:17:43,561 DEBUG - Player id:2 recieve; request:Instruction command = rsPocketCards
+2005-10-08 21:17:44,165 DEBUG - Player id:3 recieve; request:Instruction command = rsPocketCards
+2005-10-08 21:17:44,165 DEBUG - Player id:3 recieve; request:Instruction command = rsPocketCards
+2005-10-08 21:17:44,326 DEBUG - player id:2 send; request:Instruction command = rqLoopInfo arg = 1 arg = 990 arg = 0 arg = 0 arg = 995 arg = 0
+2005-10-08 21:17:44,326 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:17:44,326 DEBUG - player id:3 send; request:Instruction command = rqLoopInfo arg = 1 arg = 990 arg = 0 arg = 0 arg = 995 arg = 0
+2005-10-08 21:17:44,327 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:17:44,327 DEBUG - player id:2 send; request:Instruction command = rqStartLoop arg = 1 arg = 15 arg = 0
+2005-10-08 21:17:44,327 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:17:44,327 DEBUG - player id:3 send; request:Instruction command = rqStartLoop arg = 1 arg = 15 arg = 0
+2005-10-08 21:17:44,327 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:17:45,596 DEBUG - Player id:2 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:17:45,596 DEBUG - Player id:2 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:17:46,106 DEBUG - Player id:2 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:17:46,106 DEBUG - Player id:2 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:17:46,336 DEBUG - player id:3 send; request:Instruction command = rqYourChoice arg = 1
+2005-10-08 21:17:46,502 DEBUG - Player id:3 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:17:46,503 DEBUG - Player id:3 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:17:47,006 DEBUG - Player id:3 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:17:47,006 DEBUG - Player id:3 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:17:55,190 DEBUG - Player id:3 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:17:55,190 DEBUG - Player id:3 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:17:55,191 DEBUG - player id:2 send; request:Instruction command = rqPlayerChoice arg = 0 arg = raise
+2005-10-08 21:17:55,191 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:17:55,191 DEBUG - player id:3 send; request:Instruction command = rqPlayerChoice arg = 0 arg = raise
+2005-10-08 21:17:55,191 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:17:55,191 DEBUG - player id:2 send; request:Instruction command = rqYourChoice arg = 1
+2005-10-08 21:17:56,306 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:17:56,306 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:17:57,463 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:17:57,463 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:00,896 DEBUG - Player id:2 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:18:00,896 DEBUG - Player id:2 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:18:00,896 DEBUG - player id:2 send; request:Instruction command = rqPlayerChoice arg = 1 arg = raise
+2005-10-08 21:18:00,896 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:18:00,897 DEBUG - player id:3 send; request:Instruction command = rqPlayerChoice arg = 1 arg = raise
+2005-10-08 21:18:00,897 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:18:00,897 DEBUG - player id:2 send; request:Instruction command = rqPublicCards arg = 0 arg = 9 arg = 0 arg = 8 arg = 3 arg = 4
+2005-10-08 21:18:00,897 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:18:00,897 DEBUG - player id:3 send; request:Instruction command = rqPublicCards arg = 0 arg = 9 arg = 0 arg = 8 arg = 3 arg = 4
+2005-10-08 21:18:00,897 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:18:00,897 DEBUG - player id:2 send; request:Instruction command = rqLoopInfo arg = 1 arg = 940 arg = 0 arg = 0 arg = 960 arg = 0
+2005-10-08 21:18:00,897 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:18:00,897 DEBUG - player id:3 send; request:Instruction command = rqLoopInfo arg = 1 arg = 940 arg = 0 arg = 0 arg = 960 arg = 0
+2005-10-08 21:18:00,897 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:18:00,897 DEBUG - player id:2 send; request:Instruction command = rqStartLoop arg = 2 arg = 100 arg = 0
+2005-10-08 21:18:00,897 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:18:00,898 DEBUG - player id:3 send; request:Instruction command = rqStartLoop arg = 2 arg = 100 arg = 0
+2005-10-08 21:18:00,898 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:18:02,060 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:02,060 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:02,566 DEBUG - Player id:2 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:18:02,566 DEBUG - Player id:2 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:18:02,906 DEBUG - player id:3 send; request:Instruction command = rqYourChoice arg = 0
+2005-10-08 21:18:03,076 DEBUG - Player id:2 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:18:03,076 DEBUG - Player id:2 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:18:03,163 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:03,163 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:03,586 DEBUG - Player id:2 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:18:03,586 DEBUG - Player id:2 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:18:04,422 DEBUG - Player id:3 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:18:04,423 DEBUG - Player id:3 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:18:04,926 DEBUG - Player id:3 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:18:04,926 DEBUG - Player id:3 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:18:05,436 DEBUG - Player id:3 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:18:05,436 DEBUG - Player id:3 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:18:09,470 DEBUG - Player id:3 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:18:09,470 DEBUG - Player id:3 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:18:09,471 DEBUG - player id:2 send; request:Instruction command = rqPlayerChoice arg = 0 arg = raise
+2005-10-08 21:18:09,471 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:18:09,471 DEBUG - player id:3 send; request:Instruction command = rqPlayerChoice arg = 0 arg = raise
+2005-10-08 21:18:09,471 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:18:09,471 DEBUG - player id:2 send; request:Instruction command = rqYourChoice arg = 1
+2005-10-08 21:18:10,726 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:10,726 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:11,164 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:11,164 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:19,906 DEBUG - Player id:2 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:18:19,906 DEBUG - Player id:2 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:18:19,906 DEBUG - player id:2 send; request:Instruction command = rqPlayerChoice arg = 1 arg = raise
+2005-10-08 21:18:19,907 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:18:19,907 DEBUG - player id:3 send; request:Instruction command = rqPlayerChoice arg = 1 arg = raise
+2005-10-08 21:18:19,907 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:18:19,907 DEBUG - player id:2 send; request:Instruction command = rqPublicCards arg = 0 arg = 9 arg = 0 arg = 8 arg = 3 arg = 4 arg = 3 arg = 7
+2005-10-08 21:18:19,907 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:18:19,907 DEBUG - player id:3 send; request:Instruction command = rqPublicCards arg = 0 arg = 9 arg = 0 arg = 8 arg = 3 arg = 4 arg = 3 arg = 7
+2005-10-08 21:18:19,907 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:18:19,907 DEBUG - player id:2 send; request:Instruction command = rqLoopInfo arg = 1 arg = 890 arg = 0 arg = 0 arg = 930 arg = 0
+2005-10-08 21:18:19,907 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:18:19,907 DEBUG - player id:3 send; request:Instruction command = rqLoopInfo arg = 1 arg = 890 arg = 0 arg = 0 arg = 930 arg = 0
+2005-10-08 21:18:19,907 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:18:19,907 DEBUG - player id:2 send; request:Instruction command = rqStartLoop arg = 3 arg = 180 arg = 0
+2005-10-08 21:18:19,908 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:18:19,908 DEBUG - player id:3 send; request:Instruction command = rqStartLoop arg = 3 arg = 180 arg = 0
+2005-10-08 21:18:19,908 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:18:20,794 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:20,794 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:21,296 DEBUG - Player id:2 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:18:21,296 DEBUG - Player id:2 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:18:21,806 DEBUG - Player id:2 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:18:21,806 DEBUG - Player id:2 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:18:21,916 DEBUG - player id:3 send; request:Instruction command = rqYourChoice arg = 0
+2005-10-08 21:18:22,042 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:22,043 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:22,316 DEBUG - Player id:2 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:18:22,316 DEBUG - Player id:2 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:18:23,056 DEBUG - Player id:3 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:18:23,056 DEBUG - Player id:3 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:18:23,566 DEBUG - Player id:3 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:18:23,566 DEBUG - Player id:3 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:18:24,076 DEBUG - Player id:3 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:18:24,076 DEBUG - Player id:3 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:18:28,570 DEBUG - Player id:3 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:18:28,570 DEBUG - Player id:3 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:18:28,571 DEBUG - player id:2 send; request:Instruction command = rqPlayerChoice arg = 0 arg = raise
+2005-10-08 21:18:28,571 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:18:28,571 DEBUG - player id:3 send; request:Instruction command = rqPlayerChoice arg = 0 arg = raise
+2005-10-08 21:18:28,571 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:18:28,571 DEBUG - player id:2 send; request:Instruction command = rqYourChoice arg = 1
+2005-10-08 21:18:29,456 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:29,456 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:30,664 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:30,664 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:36,086 DEBUG - Player id:2 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:18:36,086 DEBUG - player id:2 send; request:Instruction command = rqPlayerChoice arg = 1 arg = raise
+2005-10-08 21:18:36,086 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:18:36,087 DEBUG - player id:3 send; request:Instruction command = rqPlayerChoice arg = 1 arg = raise
+2005-10-08 21:18:36,087 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:18:36,087 DEBUG - Player id:2 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:18:36,087 DEBUG - player id:2 send; request:Instruction command = rqPublicCards arg = 0 arg = 9 arg = 0 arg = 8 arg = 3 arg = 4 arg = 3 arg = 7 arg = 3 arg = 9
+2005-10-08 21:18:36,087 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:18:36,088 DEBUG - player id:3 send; request:Instruction command = rqPublicCards arg = 0 arg = 9 arg = 0 arg = 8 arg = 3 arg = 4 arg = 3 arg = 7 arg = 3 arg = 9
+2005-10-08 21:18:36,088 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:18:36,088 DEBUG - player id:2 send; request:Instruction command = rqLoopInfo arg = 1 arg = 790 arg = 0 arg = 0 arg = 870 arg = 0
+2005-10-08 21:18:36,088 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:18:36,088 DEBUG - player id:3 send; request:Instruction command = rqLoopInfo arg = 1 arg = 790 arg = 0 arg = 0 arg = 870 arg = 0
+2005-10-08 21:18:36,088 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:18:36,089 DEBUG - player id:2 send; request:Instruction command = rqStartLoop arg = 4 arg = 340 arg = 0
+2005-10-08 21:18:36,089 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:18:36,089 DEBUG - player id:3 send; request:Instruction command = rqStartLoop arg = 4 arg = 340 arg = 0
+2005-10-08 21:18:36,089 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:18:37,454 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:37,454 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:37,956 DEBUG - Player id:2 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:18:37,956 DEBUG - Player id:2 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:18:38,096 DEBUG - player id:3 send; request:Instruction command = rqYourChoice arg = 0
+2005-10-08 21:18:38,223 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:38,223 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:38,466 DEBUG - Player id:2 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:18:38,466 DEBUG - Player id:2 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:18:38,726 DEBUG - Player id:3 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:18:38,726 DEBUG - Player id:3 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:18:38,976 DEBUG - Player id:2 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:18:38,976 DEBUG - Player id:2 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:18:39,746 DEBUG - Player id:3 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:18:39,746 DEBUG - Player id:3 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:18:40,256 DEBUG - Player id:3 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:18:40,257 DEBUG - Player id:3 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:18:44,542 DEBUG - Player id:3 recieve; request:Instruction command = rsYourChoice arg = check
+2005-10-08 21:18:44,548 DEBUG - Player id:3 recieve; request:Instruction command = rsYourChoice arg = check
+2005-10-08 21:18:44,548 DEBUG - player id:2 send; request:Instruction command = rqPlayerChoice arg = 0 arg = check
+2005-10-08 21:18:44,548 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:18:44,548 DEBUG - player id:3 send; request:Instruction command = rqPlayerChoice arg = 0 arg = check
+2005-10-08 21:18:44,548 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:18:44,548 DEBUG - player id:2 send; request:Instruction command = rqYourChoice arg = 0
+2005-10-08 21:18:45,606 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:45,606 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:46,609 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:46,609 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:53,256 DEBUG - Player id:2 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:18:53,256 DEBUG - Player id:2 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:18:53,257 DEBUG - player id:2 send; request:Instruction command = rqPlayerChoice arg = 1 arg = raise
+2005-10-08 21:18:53,257 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:18:53,257 DEBUG - player id:3 send; request:Instruction command = rqPlayerChoice arg = 1 arg = raise
+2005-10-08 21:18:53,257 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:18:53,257 DEBUG - player id:3 send; request:Instruction command = rqYourChoice arg = 1
+2005-10-08 21:18:54,312 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:54,312 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:55,361 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:18:55,361 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:19:01,201 DEBUG - Player id:3 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:19:01,201 DEBUG - Player id:3 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:19:01,201 DEBUG - player id:2 send; request:Instruction command = rqPlayerChoice arg = 0 arg = raise
+2005-10-08 21:19:01,201 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:19:01,201 DEBUG - player id:3 send; request:Instruction command = rqPlayerChoice arg = 0 arg = raise
+2005-10-08 21:19:01,201 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:19:01,202 INFO - table id:4 win player id:2
+2005-10-08 21:19:01,202 DEBUG - player id:2 send; request:Instruction command = rqWin arg = 1 arg = 500 arg = 0 arg = 4 arg = 1 arg = 6
+2005-10-08 21:19:01,202 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:19:01,202 DEBUG - player id:3 send; request:Instruction command = rqWin arg = 1 arg = 500 arg = 0 arg = 4 arg = 1 arg = 6
+2005-10-08 21:19:01,202 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:19:02,112 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:19:02,112 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:19:02,881 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:19:02,881 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:19:03,386 DEBUG - Player id:3 recieve; request:Instruction command = rsWin
+2005-10-08 21:19:03,386 DEBUG - Player id:3 recieve; request:Instruction command = rsWin
+2005-10-08 21:19:03,636 DEBUG - Player id:2 recieve; request:Instruction command = rsWin
+2005-10-08 21:19:03,636 DEBUG - Player id:2 recieve; request:Instruction command = rsWin
+2005-10-08 21:19:16,206 DEBUG - table id:4 start new round
+2005-10-08 21:19:16,206 DEBUG - player id:2 send; request:Instruction command = rqStartRound
+2005-10-08 21:19:16,206 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:19:16,207 DEBUG - player id:3 send; request:Instruction command = rqStartRound
+2005-10-08 21:19:16,207 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:19:20,071 DEBUG - Player id:2 recieve; request:Instruction command = rsStartRound arg = ack
+2005-10-08 21:19:20,071 DEBUG - Player id:2 recieve; request:Instruction command = rsStartRound arg = ack
+2005-10-08 21:19:20,621 DEBUG - Player id:3 recieve; request:Instruction command = rsStartRound arg = ack
+2005-10-08 21:19:20,621 DEBUG - Player id:3 recieve; request:Instruction command = rsStartRound arg = ack
+2005-10-08 21:19:20,622 DEBUG - player id:2 send; request:Instruction command = rqTableFull arg = alex arg = 1230 arg = 1 arg = 1 arg = 0 arg = smith arg = 770 arg = 0 arg = 3 arg = 2
+2005-10-08 21:19:20,622 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:19:20,622 DEBUG - player id:3 send; request:Instruction command = rqTableFull arg = alex arg = 1230 arg = 1 arg = 1 arg = 0 arg = smith arg = 770 arg = 0 arg = 3 arg = 2
+2005-10-08 21:19:20,622 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:19:22,320 DEBUG - Player id:3 recieve; request:Instruction command = rsTableFull
+2005-10-08 21:19:22,320 DEBUG - Player id:3 recieve; request:Instruction command = rsTableFull
+2005-10-08 21:19:22,616 DEBUG - Player id:2 recieve; request:Instruction command = rsTableFull
+2005-10-08 21:19:22,616 DEBUG - Player id:2 recieve; request:Instruction command = rsTableFull
+2005-10-08 21:19:22,626 DEBUG - player id:2 send; request:Instruction command = rqSmallBlind arg = 1
+2005-10-08 21:19:22,626 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:19:22,626 DEBUG - player id:3 send; request:Instruction command = rqSmallBlind arg = 1
+2005-10-08 21:19:22,626 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:19:23,636 DEBUG - Player id:2 recieve; request:Instruction command = rsSmallBlind
+2005-10-08 21:19:23,636 DEBUG - Player id:2 recieve; request:Instruction command = rsSmallBlind
+2005-10-08 21:19:24,622 DEBUG - Player id:3 recieve; request:Instruction command = rsSmallBlind
+2005-10-08 21:19:24,622 DEBUG - Player id:3 recieve; request:Instruction command = rsSmallBlind
+2005-10-08 21:19:24,636 DEBUG - table id:4 pocket card player id:2
+2005-10-08 21:19:24,636 DEBUG - table id:4 pocket card player id:3
+2005-10-08 21:19:25,676 DEBUG - Player id:2 recieve; request:Instruction command = rsPocketCards
+2005-10-08 21:19:25,676 DEBUG - Player id:2 recieve; request:Instruction command = rsPocketCards
+2005-10-08 21:19:26,300 DEBUG - Player id:3 recieve; request:Instruction command = rsPocketCards
+2005-10-08 21:19:26,300 DEBUG - Player id:3 recieve; request:Instruction command = rsPocketCards
+2005-10-08 21:19:26,646 DEBUG - player id:2 send; request:Instruction command = rqLoopInfo arg = 1 arg = 1225 arg = 0 arg = 0 arg = 760 arg = 0
+2005-10-08 21:19:26,646 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:19:26,647 DEBUG - player id:3 send; request:Instruction command = rqLoopInfo arg = 1 arg = 1225 arg = 0 arg = 0 arg = 760 arg = 0
+2005-10-08 21:19:26,647 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:19:26,647 DEBUG - player id:2 send; request:Instruction command = rqStartLoop arg = 1 arg = 15 arg = 1
+2005-10-08 21:19:26,647 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:19:26,647 DEBUG - player id:3 send; request:Instruction command = rqStartLoop arg = 1 arg = 15 arg = 1
+2005-10-08 21:19:26,647 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:19:27,716 DEBUG - Player id:2 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:19:27,716 DEBUG - Player id:2 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:19:28,226 DEBUG - Player id:2 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:19:28,226 DEBUG - Player id:2 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:19:28,656 DEBUG - player id:2 send; request:Instruction command = rqYourChoice arg = 1
+2005-10-08 21:19:28,740 DEBUG - Player id:3 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:19:28,740 DEBUG - Player id:3 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:19:29,246 DEBUG - Player id:3 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:19:29,246 DEBUG - Player id:3 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:19:30,536 DEBUG - Checking start
+2005-10-08 21:19:30,536 DEBUG - Checking finished
+2005-10-08 21:19:33,551 DEBUG - Player id:2 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:19:33,551 DEBUG - Player id:2 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:19:33,551 DEBUG - player id:2 send; request:Instruction command = rqPlayerChoice arg = 1 arg = raise
+2005-10-08 21:19:33,551 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:19:33,551 DEBUG - player id:3 send; request:Instruction command = rqPlayerChoice arg = 1 arg = raise
+2005-10-08 21:19:33,551 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:19:33,551 DEBUG - player id:3 send; request:Instruction command = rqYourChoice arg = 1
+2005-10-08 21:19:34,598 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:19:34,598 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:19:35,461 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:19:35,461 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:19:38,500 DEBUG - Player id:3 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:19:38,500 DEBUG - Player id:3 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:19:38,500 DEBUG - player id:2 send; request:Instruction command = rqPlayerChoice arg = 0 arg = raise
+2005-10-08 21:19:38,500 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:19:38,501 DEBUG - player id:3 send; request:Instruction command = rqPlayerChoice arg = 0 arg = raise
+2005-10-08 21:19:38,501 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:19:38,501 DEBUG - player id:2 send; request:Instruction command = rqPublicCards arg = 3 arg = 8 arg = 0 arg = 10 arg = 1 arg = 3
+2005-10-08 21:19:38,501 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:19:38,501 DEBUG - player id:3 send; request:Instruction command = rqPublicCards arg = 3 arg = 8 arg = 0 arg = 10 arg = 1 arg = 3
+2005-10-08 21:19:38,501 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:19:38,501 DEBUG - player id:2 send; request:Instruction command = rqLoopInfo arg = 1 arg = 1190 arg = 0 arg = 0 arg = 710 arg = 0
+2005-10-08 21:19:38,501 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:19:38,501 DEBUG - player id:3 send; request:Instruction command = rqLoopInfo arg = 1 arg = 1190 arg = 0 arg = 0 arg = 710 arg = 0
+2005-10-08 21:19:38,501 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:19:38,501 DEBUG - player id:2 send; request:Instruction command = rqStartLoop arg = 2 arg = 100 arg = 1
+2005-10-08 21:19:38,502 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:19:38,502 DEBUG - player id:3 send; request:Instruction command = rqStartLoop arg = 2 arg = 100 arg = 1
+2005-10-08 21:19:38,502 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:19:39,349 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:19:39,349 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:19:40,506 DEBUG - player id:2 send; request:Instruction command = rqYourChoice arg = 0
+2005-10-08 21:19:40,899 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:19:40,899 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:19:41,031 DEBUG - Player id:2 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:19:41,031 DEBUG - Player id:2 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:19:41,406 DEBUG - Player id:3 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:19:41,406 DEBUG - Player id:3 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:19:41,536 DEBUG - Player id:2 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:19:41,536 DEBUG - Player id:2 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:19:41,916 DEBUG - Player id:3 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:19:41,916 DEBUG - Player id:3 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:19:42,046 DEBUG - Player id:2 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:19:42,046 DEBUG - Player id:2 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:19:42,426 DEBUG - Player id:3 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:19:42,426 DEBUG - Player id:3 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:19:47,188 DEBUG - Player id:2 recieve; request:Instruction command = rsYourChoice arg = fold
+2005-10-08 21:19:47,188 DEBUG - Player id:2 recieve; request:Instruction command = rsYourChoice arg = fold
+2005-10-08 21:19:47,188 DEBUG - Player id : 2 add to fold's gamblers
+2005-10-08 21:19:47,188 INFO - Round over, because only one active gambler remain; Win: player id: 3 seat id: 0
+2005-10-08 21:19:47,188 DEBUG - player id:2 send; request:Instruction command = rqPlayerChoice arg = 1 arg = fold
+2005-10-08 21:19:47,188 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:19:47,188 DEBUG - player id:3 send; request:Instruction command = rqPlayerChoice arg = 1 arg = fold
+2005-10-08 21:19:47,188 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:19:47,189 DEBUG - player id:2 send; request:Instruction command = rqWin arg = 0 arg = 100 arg = 0 arg = 5 arg = 1 arg = 5
+2005-10-08 21:19:47,189 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:19:47,189 DEBUG - player id:3 send; request:Instruction command = rqWin arg = 0 arg = 100 arg = 0 arg = 5 arg = 1 arg = 5
+2005-10-08 21:19:47,189 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:19:47,189 INFO - table id:4 win player id:3
+2005-10-08 21:19:47,189 DEBUG - table id:4 start new round
+2005-10-08 21:19:47,189 DEBUG - player id:2 send; request:Instruction command = rqStartRound
+2005-10-08 21:19:47,189 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:19:47,189 DEBUG - player id:3 send; request:Instruction command = rqStartRound
+2005-10-08 21:19:47,189 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:19:48,210 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:19:48,210 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:19:48,716 DEBUG - Player id:2 recieve; request:Instruction command = rsWin
+2005-10-08 21:19:48,716 DEBUG - Player id:2 recieve; request:Instruction command = rsWin
+2005-10-08 21:19:49,258 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:19:49,258 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:19:50,378 DEBUG - Player id:3 recieve; request:Instruction command = rsWin
+2005-10-08 21:19:50,378 DEBUG - Player id:3 recieve; request:Instruction command = rsWin
+2005-10-08 21:19:54,019 DEBUG - Player id:3 recieve; request:Instruction command = rsStartRound arg = ack
+2005-10-08 21:19:54,957 DEBUG - Player id:3 recieve; request:Instruction command = rsStartRound arg = ack
+2005-10-08 21:19:54,967 DEBUG - Player id:2 recieve; request:Instruction command = rsStartRound arg = ack
+2005-10-08 21:19:54,967 DEBUG - Player id:2 recieve; request:Instruction command = rsStartRound arg = ack
+2005-10-08 21:19:54,968 DEBUG - player id:2 send; request:Instruction command = rqTableFull arg = alex arg = 1190 arg = 1 arg = 1 arg = 0 arg = smith arg = 810 arg = 0 arg = 3 arg = 2
+2005-10-08 21:19:54,968 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:19:54,968 DEBUG - player id:3 send; request:Instruction command = rqTableFull arg = alex arg = 1190 arg = 1 arg = 1 arg = 0 arg = smith arg = 810 arg = 0 arg = 3 arg = 2
+2005-10-08 21:19:54,968 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:19:56,808 DEBUG - Player id:2 recieve; request:Instruction command = rsTableFull
+2005-10-08 21:19:56,808 DEBUG - Player id:2 recieve; request:Instruction command = rsTableFull
+2005-10-08 21:19:56,976 DEBUG - player id:2 send; request:Instruction command = rqSmallBlind arg = 0
+2005-10-08 21:19:56,976 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:19:56,976 DEBUG - player id:3 send; request:Instruction command = rqSmallBlind arg = 0
+2005-10-08 21:19:56,976 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:19:57,968 DEBUG - Player id:2 recieve; request:Instruction command = rsSmallBlind
+2005-10-08 21:19:57,968 DEBUG - Player id:2 recieve; request:Instruction command = rsSmallBlind
+2005-10-08 21:19:58,419 DEBUG - Player id:3 recieve; request:Instruction command = rsTableFull
+2005-10-08 21:19:58,419 DEBUG - Player id:3 recieve; request:Instruction command = rsTableFull
+2005-10-08 21:19:58,986 DEBUG - table id:4 pocket card player id:2
+2005-10-08 21:19:58,986 DEBUG - table id:4 pocket card player id:3
+2005-10-08 21:19:59,540 DEBUG - Player id:3 recieve; request:Instruction command = rsSmallBlind
+2005-10-08 21:19:59,540 DEBUG - Player id:3 recieve; request:Instruction command = rsSmallBlind
+2005-10-08 21:20:00,010 DEBUG - Player id:2 recieve; request:Instruction command = rsPocketCards
+2005-10-08 21:20:00,010 DEBUG - Player id:2 recieve; request:Instruction command = rsPocketCards
+2005-10-08 21:20:00,996 DEBUG - player id:2 send; request:Instruction command = rqLoopInfo arg = 1 arg = 1180 arg = 0 arg = 0 arg = 805 arg = 0
+2005-10-08 21:20:00,996 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:20:00,997 DEBUG - player id:3 send; request:Instruction command = rqLoopInfo arg = 1 arg = 1180 arg = 0 arg = 0 arg = 805 arg = 0
+2005-10-08 21:20:00,997 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:20:00,997 DEBUG - player id:2 send; request:Instruction command = rqStartLoop arg = 1 arg = 15 arg = 0
+2005-10-08 21:20:00,997 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:20:00,997 DEBUG - player id:3 send; request:Instruction command = rqStartLoop arg = 1 arg = 15 arg = 0
+2005-10-08 21:20:00,997 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:20:01,277 DEBUG - Player id:3 recieve; request:Instruction command = rsPocketCards
+2005-10-08 21:20:01,277 DEBUG - Player id:3 recieve; request:Instruction command = rsPocketCards
+2005-10-08 21:20:02,046 DEBUG - Player id:2 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:20:02,046 DEBUG - Player id:2 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:20:02,556 DEBUG - Player id:2 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:20:02,556 DEBUG - Player id:2 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:20:03,006 DEBUG - player id:3 send; request:Instruction command = rqYourChoice arg = 1
+2005-10-08 21:20:03,019 DEBUG - Player id:3 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:20:03,019 DEBUG - Player id:3 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:20:03,526 DEBUG - Player id:3 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:20:03,526 DEBUG - Player id:3 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:20:07,080 DEBUG - Player id:3 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:20:07,080 DEBUG - Player id:3 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:20:07,080 DEBUG - player id:2 send; request:Instruction command = rqPlayerChoice arg = 0 arg = raise
+2005-10-08 21:20:07,080 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:20:07,080 DEBUG - player id:3 send; request:Instruction command = rqPlayerChoice arg = 0 arg = raise
+2005-10-08 21:20:07,080 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:20:07,080 DEBUG - player id:2 send; request:Instruction command = rqYourChoice arg = 1
+2005-10-08 21:20:07,987 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:20:07,988 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:20:08,820 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:20:08,820 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:20:11,167 DEBUG - Player id:2 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:20:11,167 DEBUG - Player id:2 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:20:11,167 DEBUG - player id:2 send; request:Instruction command = rqPlayerChoice arg = 1 arg = raise
+2005-10-08 21:20:11,167 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:20:11,168 DEBUG - player id:3 send; request:Instruction command = rqPlayerChoice arg = 1 arg = raise
+2005-10-08 21:20:11,168 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:20:11,168 DEBUG - player id:2 send; request:Instruction command = rqPublicCards arg = 3 arg = 8 arg = 2 arg = 5 arg = 3 arg = J
+2005-10-08 21:20:11,168 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:20:11,168 DEBUG - player id:3 send; request:Instruction command = rqPublicCards arg = 3 arg = 8 arg = 2 arg = 5 arg = 3 arg = J
+2005-10-08 21:20:11,168 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:20:11,168 DEBUG - player id:2 send; request:Instruction command = rqLoopInfo arg = 1 arg = 1130 arg = 0 arg = 0 arg = 770 arg = 0
+2005-10-08 21:20:11,168 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:20:11,168 DEBUG - player id:3 send; request:Instruction command = rqLoopInfo arg = 1 arg = 1130 arg = 0 arg = 0 arg = 770 arg = 0
+2005-10-08 21:20:11,168 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:20:11,168 DEBUG - player id:2 send; request:Instruction command = rqStartLoop arg = 2 arg = 100 arg = 0
+2005-10-08 21:20:11,168 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:20:11,168 DEBUG - player id:3 send; request:Instruction command = rqStartLoop arg = 2 arg = 100 arg = 0
+2005-10-08 21:20:11,169 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:20:12,186 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:20:12,186 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:20:12,696 DEBUG - Player id:2 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:20:12,696 DEBUG - Player id:2 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:20:13,176 DEBUG - player id:3 send; request:Instruction command = rqYourChoice arg = 0
+2005-10-08 21:20:13,206 DEBUG - Player id:2 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:20:13,206 DEBUG - Player id:2 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:20:13,406 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:20:13,406 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:20:13,716 DEBUG - Player id:2 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:20:13,716 DEBUG - Player id:2 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:20:14,079 DEBUG - Player id:3 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:20:14,079 DEBUG - Player id:3 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:20:14,586 DEBUG - Player id:3 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:20:14,586 DEBUG - Player id:3 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:20:15,096 DEBUG - Player id:3 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:20:15,096 DEBUG - Player id:3 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:20:20,819 DEBUG - Player id:3 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:20:20,819 DEBUG - Player id:3 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:20:20,819 DEBUG - player id:2 send; request:Instruction command = rqPlayerChoice arg = 0 arg = raise
+2005-10-08 21:20:20,819 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:20:20,819 DEBUG - player id:3 send; request:Instruction command = rqPlayerChoice arg = 0 arg = raise
+2005-10-08 21:20:20,819 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:20:20,819 DEBUG - player id:2 send; request:Instruction command = rqYourChoice arg = 1
+2005-10-08 21:20:21,668 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:20:21,668 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:20:22,518 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:20:22,518 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:20:25,746 DEBUG - Player id:2 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:20:25,746 DEBUG - Player id:2 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:20:25,746 DEBUG - player id:2 send; request:Instruction command = rqPlayerChoice arg = 1 arg = raise
+2005-10-08 21:20:25,747 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:20:25,747 DEBUG - player id:3 send; request:Instruction command = rqPlayerChoice arg = 1 arg = raise
+2005-10-08 21:20:25,747 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:20:25,748 DEBUG - player id:2 send; request:Instruction command = rqPublicCards arg = 3 arg = 8 arg = 2 arg = 5 arg = 3 arg = J arg = 3 arg = 3
+2005-10-08 21:20:25,748 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:20:25,748 DEBUG - player id:3 send; request:Instruction command = rqPublicCards arg = 3 arg = 8 arg = 2 arg = 5 arg = 3 arg = J arg = 3 arg = 3
+2005-10-08 21:20:25,748 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:20:25,748 DEBUG - player id:2 send; request:Instruction command = rqLoopInfo arg = 1 arg = 1080 arg = 0 arg = 0 arg = 740 arg = 0
+2005-10-08 21:20:25,748 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:20:25,748 DEBUG - player id:3 send; request:Instruction command = rqLoopInfo arg = 1 arg = 1080 arg = 0 arg = 0 arg = 740 arg = 0
+2005-10-08 21:20:25,749 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:20:25,749 DEBUG - player id:2 send; request:Instruction command = rqStartLoop arg = 3 arg = 180 arg = 0
+2005-10-08 21:20:25,749 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:20:25,749 DEBUG - player id:3 send; request:Instruction command = rqStartLoop arg = 3 arg = 180 arg = 0
+2005-10-08 21:20:25,749 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:20:26,829 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:20:26,829 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:20:27,336 DEBUG - Player id:2 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:20:27,336 DEBUG - Player id:2 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:20:27,756 DEBUG - player id:3 send; request:Instruction command = rqYourChoice arg = 0
+2005-10-08 21:20:27,799 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:20:27,799 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:20:27,846 DEBUG - Player id:2 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:20:27,846 DEBUG - Player id:2 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:20:28,306 DEBUG - Player id:3 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:20:28,306 DEBUG - Player id:3 recieve; request:Instruction command = rsPublicCards
+2005-10-08 21:20:28,356 DEBUG - Player id:2 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:20:28,356 DEBUG - Player id:2 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:20:29,326 DEBUG - Player id:3 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:20:29,326 DEBUG - Player id:3 recieve; request:Instruction command = rsLoopInfo
+2005-10-08 21:20:29,836 DEBUG - Player id:3 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:20:29,836 DEBUG - Player id:3 recieve; request:Instruction command = rsStartLoop
+2005-10-08 21:20:32,997 DEBUG - Player id:3 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:20:32,997 DEBUG - Player id:3 recieve; request:Instruction command = rsYourChoice arg = raise
+2005-10-08 21:20:32,998 DEBUG - player id:2 send; request:Instruction command = rqPlayerChoice arg = 0 arg = raise
+2005-10-08 21:20:32,998 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:20:32,998 DEBUG - player id:3 send; request:Instruction command = rqPlayerChoice arg = 0 arg = raise
+2005-10-08 21:20:32,998 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:20:32,998 DEBUG - player id:2 send; request:Instruction command = rqYourChoice arg = 1
+2005-10-08 21:20:33,966 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:20:33,966 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:20:35,158 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:20:35,158 DEBUG - Player id:3 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:20:44,534 ERROR - java.net.SocketException: Broken pipe
+2005-10-08 21:20:44,534 INFO - remove connection: ru.poker.server.net.core.ConnectionImpl@118f375
+2005-10-08 21:20:45,687 DEBUG - Player id:2 recieve; request:Instruction command = rsYourChoice arg = fold
+2005-10-08 21:20:45,687 DEBUG - Player id:2 recieve; request:Instruction command = rsYourChoice arg = fold
+2005-10-08 21:20:45,687 DEBUG - Player id : 2 add to fold's gamblers
+2005-10-08 21:20:45,687 INFO - Round over, because only one active gambler remain; Win: player id: 3 seat id: 0
+2005-10-08 21:20:45,687 DEBUG - player id:2 send; request:Instruction command = rqPlayerChoice arg = 1 arg = fold
+2005-10-08 21:20:45,687 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:20:45,687 ERROR - Can't send instruction
+java.net.SocketException: Broken pipe
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:92)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:115)
+	at ru.poker.server.net.protocol.core.ParserImpl.writeToStream(Unknown Source)
+	at ru.poker.server.net.core.ConnectionImpl.send(Unknown Source)
+	at ru.poker.server.net.Handler.send(Unknown Source)
+	at ru.poker.server.casino.core.NetPlayer.event(Unknown Source)
+	at ru.poker.server.casino.core.DefaultTable.notifyAll(Unknown Source)
+	at ru.poker.server.casino.core.DefaultTable.betLoop(Unknown Source)
+	at ru.poker.server.casino.core.DefaultTable.round(Unknown Source)
+	at ru.poker.server.casino.core.DefaultTable.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:595)
+2005-10-08 21:20:45,721 DEBUG - table id:4 player: 3 seatId: 0 unregistered
+2005-10-08 21:20:45,722 DEBUG - Player id: 3 unregistered from active gamblers
+2005-10-08 21:20:45,722 DEBUG - player id:2 send; request:Instruction command = rqPlayerOut arg = 0
+2005-10-08 21:20:45,722 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:20:45,722 INFO - Connection close
+2005-10-08 21:20:45,722 DEBUG - player id:3 send; request:Instruction command = rqPlayerChoice arg = 1 arg = fold
+2005-10-08 21:20:45,722 DEBUG - table id: 4 notify player id: 3
+2005-10-08 21:20:45,722 DEBUG - player id:2 send; request:Instruction command = rqWin arg = 0 arg = 240 arg = 0 arg = 9 arg = 3 arg = 2
+2005-10-08 21:20:45,722 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:20:45,722 INFO - table id:4 win player id:3
+2005-10-08 21:20:45,722 DEBUG - table id:4 start new round
+2005-10-08 21:20:45,722 DEBUG - player id:2 send; request:Instruction command = rqCancelRound
+2005-10-08 21:20:45,722 DEBUG - table id: 4 notify player id: 2
+2005-10-08 21:20:45,722 INFO - table id:4 finish game
+2005-10-08 21:20:46,905 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:20:46,905 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerChoice
+2005-10-08 21:20:47,406 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerOut
+2005-10-08 21:20:47,406 DEBUG - Player id:2 recieve; request:Instruction command = rsPlayerOut
+2005-10-08 21:26:26,806 INFO - SocketListener start. Remoute address = /70.7.161.115:32774
+2005-10-08 21:26:26,807 INFO - add connection: ru.poker.server.net.core.ConnectionImpl@a32b
+2005-10-08 21:26:26,807 DEBUG - New connection accepted
+2005-10-08 21:26:33,141 INFO - SocketListener start. Remoute address = /68.26.39.81:32793
+2005-10-08 21:26:33,141 INFO - add connection: ru.poker.server.net.core.ConnectionImpl@1d8957f
+2005-10-08 21:26:33,141 DEBUG - New connection accepted
+2005-10-08 21:26:35,800 DEBUG -  recieve; request:Instruction command = rqLogin arg = ALEX arg = 123
+2005-10-08 21:26:35,800 INFO - max ammount of player reached or player login
+2005-10-08 21:26:35,800 DEBUG - Player id:2 recieve; request:Instruction command = rqLogin arg = ALEX arg = 123 send; response:Instruction command = rsLogin arg = nack
+2005-10-08 21:27:07,606 DEBUG -  recieve; request:Instruction command = rqLogin arg = PAUL arg = 123
+2005-10-08 21:27:07,606 INFO - authorize user login: PAUL pwd: 123
+2005-10-08 21:27:07,607 DEBUG - Player id:1 recieve; request:Instruction command = rqLogin arg = PAUL arg = 123 send; response:Instruction command = rsLogin arg = ack
+2005-10-08 21:27:08,626 DEBUG - Player id:1 recieve; request:Instruction command = rqProfile arg = PAUL
+2005-10-08 21:27:08,626 DEBUG - Player id:1 recieve; request:Instruction command = rqProfile arg = PAUL send; response:Instruction command = rsProfile arg = 1000 arg = 0 arg = 1
+2005-10-08 21:27:15,117 DEBUG - Player id:2 recieve; request:Instruction command = rqLogin arg = ALEX arg = 123
+2005-10-08 21:27:15,117 INFO - max ammount of player reached or player login
+2005-10-08 21:27:15,117 DEBUG - Player id:2 recieve; request:Instruction command = rqLogin arg = ALEX arg = 123 send; response:Instruction command = rsLogin arg = nack
+2005-10-08 21:27:18,826 DEBUG - Player id:1 recieve; request:Instruction command = rqRooms
+2005-10-08 21:27:18,827 DEBUG - Player id:1 recieve; request:Instruction command = rqRooms send; response:Instruction command = rsRooms arg = 5 arg = Room 5 arg = 10 arg = 20 arg = 4 arg = Room 4 arg = 8 arg = 16 arg = 3 arg = Room 3 arg = 6 arg = 12 arg = 2 arg = Room 2 arg = 4 arg = 8 arg = 1 arg = Room 1 arg = 2 arg = 4
+2005-10-08 21:27:26,986 DEBUG - Player id:1 recieve; request:Instruction command = rqTables arg = 1
+2005-10-08 21:27:26,986 DEBUG - Player id:1 recieve; request:Instruction command = rqTables arg = 1 send; response:Instruction command = rsTables arg = 0 arg = 0
+2005-10-08 21:27:31,685 DEBUG - Player id:1 recieve; request:Instruction command = rqTableFull arg = 0
+2005-10-08 21:27:31,685 DEBUG - Player id:1 recieve; request:Instruction command = rqTableFull arg = 0 send; response:Instruction command = rsTableFull
+2005-10-08 21:27:44,061 DEBUG - Player id:1 recieve; request:Instruction command = rqJoinTable arg = 0 arg = 0
+2005-10-08 21:27:44,061 DEBUG - table id:0 player: 1 seatId: 0 registered
+2005-10-08 21:27:44,062 DEBUG - player id:1 send; request:Instruction command = rqPlayerIn arg = 0 arg = paul arg = 1000 arg = 0 arg = 1
+2005-10-08 21:27:44,062 DEBUG - table id: 0 notify player id: 1
+2005-10-08 21:27:44,062 DEBUG - Player id:1 recieve; request:Instruction command = rqJoinTable arg = 0 arg = 0 send; response:Instruction command = rsJoinTable arg = ack
+2005-10-08 21:27:45,076 DEBUG - Player id:1 recieve; request:Instruction command = rsPlayerIn
+2005-10-08 21:27:45,076 DEBUG - Player id:1 recieve; request:Instruction command = rsPlayerIn
+2005-10-08 21:28:02,618 DEBUG - Player id:2 recieve; request:Instruction command = rqLogin arg = ALEX arg = 123
+2005-10-08 21:28:02,618 INFO - max ammount of player reached or player login
+2005-10-08 21:28:02,618 DEBUG - Player id:2 recieve; request:Instruction command = rqLogin arg = ALEX arg = 123 send; response:Instruction command = rsLogin arg = nack
+2005-10-08 21:28:25,972 DEBUG - Player id:2 recieve; request:Instruction command = rqLogin arg = alex arg = 123
+2005-10-08 21:28:25,972 INFO - max ammount of player reached or player login
+2005-10-08 21:28:25,972 DEBUG - Player id:2 recieve; request:Instruction command = rqLogin arg = alex arg = 123 send; response:Instruction command = rsLogin arg = nack
+2005-10-08 21:29:05,932 INFO - SocketListener start. Remoute address = /68.26.15.6:32801
+2005-10-08 21:29:05,932 INFO - add connection: ru.poker.server.net.core.ConnectionImpl@8965fb
+2005-10-08 21:29:05,932 DEBUG - New connection accepted
+2005-10-08 21:29:07,650 DEBUG -  recieve; request:Instruction command = rqLogin arg = smith arg = 123
+2005-10-08 21:29:07,650 INFO - authorize user login: smith pwd: 123
+2005-10-08 21:29:07,650 DEBUG - Player id:3 recieve; request:Instruction command = rqLogin arg = smith arg = 123 send; response:Instruction command = rsLogin arg = ack
+2005-10-08 21:29:10,115 DEBUG - Player id:3 recieve; request:Instruction command = rqProfile arg = smith
+2005-10-08 21:29:10,115 DEBUG - Player id:3 recieve; request:Instruction command = rqProfile arg = smith send; response:Instruction command = rsProfile arg = 1000 arg = 3 arg = 2
+2005-10-08 21:29:13,531 DEBUG - Player id:3 recieve; request:Instruction command = rqRooms
+2005-10-08 21:29:13,532 DEBUG - Player id:3 recieve; request:Instruction command = rqRooms send; response:Instruction command = rsRooms arg = 5 arg = Room 5 arg = 10 arg = 20 arg = 4 arg = Room 4 arg = 8 arg = 16 arg = 3 arg = Room 3 arg = 6 arg = 12 arg = 2 arg = Room 2 arg = 4 arg = 8 arg = 1 arg = Room 1 arg = 2 arg = 4
+2005-10-08 21:29:17,975 DEBUG - Player id:3 recieve; request:Instruction command = rqTables arg = 1
+2005-10-08 21:29:17,975 DEBUG - Player id:3 recieve; request:Instruction command = rqTables arg = 1 send; response:Instruction command = rsTables arg = 0 arg = 1
+2005-10-08 21:29:20,975 DEBUG - Player id:3 recieve; request:Instruction command = rqTableFull arg = 0
+2005-10-08 21:29:20,976 DEBUG - Player id:3 recieve; request:Instruction command = rqTableFull arg = 0 send; response:Instruction command = rsTableFull arg = paul arg = 1000 arg = 0 arg = 0 arg = 1
+2005-10-08 21:29:35,956 ERROR - java.net.SocketException: Broken pipe
+2005-10-08 21:29:35,957 INFO - remove connection: ru.poker.server.net.core.ConnectionImpl@8965fb
+2005-10-08 21:29:36,455 INFO - SocketListener start. Remoute address = /68.26.15.6:32803
+2005-10-08 21:29:36,455 INFO - add connection: ru.poker.server.net.core.ConnectionImpl@1dd7056
+2005-10-08 21:29:36,455 DEBUG - New connection accepted
+2005-10-08 21:29:37,970 DEBUG -  recieve; request:Instruction command = rqLogin arg = smith arg = 123
+2005-10-08 21:29:37,970 INFO - max ammount of player reached or player login
+2005-10-08 21:29:37,970 DEBUG - Player id:3 recieve; request:Instruction command = rqLogin arg = smith arg = 123 send; response:Instruction command = rsLogin arg = nack
+2005-10-08 21:29:49,216 ERROR - java.net.SocketException: Broken pipe
+2005-10-08 21:29:49,217 INFO - remove connection: ru.poker.server.net.core.ConnectionImpl@1dd7056
+2005-10-08 21:30:15,106 DEBUG - Player id:2 recieve; request:Instruction command = rqLogin arg = alex arg = 123
+2005-10-08 21:30:15,106 INFO - max ammount of player reached or player login
+2005-10-08 21:30:15,107 DEBUG - Player id:2 recieve; request:Instruction command = rqLogin arg = alex arg = 123 send; response:Instruction command = rsLogin arg = nack
+2005-10-08 21:30:49,396 ERROR - java.net.SocketException: Connection reset
+2005-10-08 21:30:49,396 INFO - remove connection: ru.poker.server.net.core.ConnectionImpl@1d8957f
+2005-10-08 21:31:03,152 DEBUG - Player id:1 recieve; request:Instruction command = rqPlayerOut arg = 0
+2005-10-08 21:31:03,152 DEBUG - table id:0 player: 1 seatId: 0 unregistered
+2005-10-08 21:31:03,152 ERROR - Can't send instruction
+java.net.SocketException: Broken pipe
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:92)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:115)
+	at ru.poker.server.net.protocol.core.ParserImpl.writeToStream(Unknown Source)
+	at ru.poker.server.net.core.ConnectionImpl.send(Unknown Source)
+	at ru.poker.server.net.Handler.send(Unknown Source)
+	at ru.poker.server.casino.core.NetPlayer.event(Unknown Source)
+	at ru.poker.server.casino.core.DefaultTable.notifyAll(Unknown Source)
+	at ru.poker.server.casino.core.DefaultTable.unregisterPlayer(Unknown Source)
+	at ru.poker.server.casino.core.NetPlayer.unregister(Unknown Source)
+	at ru.poker.server.casino.core.NetPlayer.playerOut(Unknown Source)
+	at ru.poker.server.casino.core.NetPlayer.recieve(Unknown Source)
+	at ru.poker.server.net.core.ConnectionImpl.recieve(Unknown Source)
+	at ru.poker.server.net.core.SocketListener.run(Unknown Source)
+2005-10-08 21:31:03,152 DEBUG - table id:0 player: 3 can't be unregistered, because not present at the table
+2005-10-08 21:31:03,153 INFO - Connection close
+2005-10-08 21:31:03,153 DEBUG - player id:3 send; request:Instruction command = rqPlayerOut arg = 0
+2005-10-08 21:31:03,153 DEBUG - table id: 0 notify player id: 3
+2005-10-08 21:31:03,153 DEBUG - Player id:1 recieve; request:Instruction command = rqPlayerOut arg = 0
+2005-10-08 21:31:03,656 DEBUG - Player id:1 recieve; request:Instruction command = rqGameOver
+2005-10-08 21:31:03,656 INFO - remove connection: ru.poker.server.net.core.ConnectionImpl@a32b
+2005-10-08 21:31:03,656 INFO - Connection close
+2005-10-08 21:31:03,656 DEBUG - Player id:1 recieve; request:Instruction command = rqGameOver
+2005-10-08 21:31:15,276 INFO - SocketListener start. Remoute address = /68.26.39.81:32794
+2005-10-08 21:31:15,276 INFO - add connection: ru.poker.server.net.core.ConnectionImpl@fa3ac1
+2005-10-08 21:31:15,277 DEBUG - New connection accepted
+2005-10-08 21:31:17,880 DEBUG -  recieve; request:Instruction command = rqLogin arg = ALEX arg = 123
+2005-10-08 21:31:17,880 INFO - max ammount of player reached or player login
+2005-10-08 21:31:17,880 DEBUG - Player id:2 recieve; request:Instruction command = rqLogin arg = ALEX arg = 123 send; response:Instruction command = rsLogin arg = nack
+2005-10-08 21:31:42,356 DEBUG - Player id:2 recieve; request:Instruction command = rqLogin arg = ALEX arg = 123
+2005-10-08 21:31:42,356 INFO - max ammount of player reached or player login
+2005-10-08 21:31:42,357 DEBUG - Player id:2 recieve; request:Instruction command = rqLogin arg = ALEX arg = 123 send; response:Instruction command = rsLogin arg = nack
+2005-10-08 21:31:55,696 ERROR - java.net.SocketException: Connection reset
+2005-10-08 21:31:55,696 INFO - remove connection: ru.poker.server.net.core.ConnectionImpl@fa3ac1
+2005-10-08 21:40:12,956 ERROR - java.net.SocketException: Connection timed out
+2005-10-08 21:40:12,957 INFO - remove connection: ru.poker.server.net.core.ConnectionImpl@471e30
+2005-10-08 22:19:30,546 DEBUG - Checking start
+2005-10-08 22:19:30,546 DEBUG - Checking finished
+2005-10-08 23:19:30,556 DEBUG - Checking start
+2005-10-08 23:19:30,556 DEBUG - Checking finished

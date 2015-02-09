@@ -1,0 +1,235 @@
+2005-09-06 08:47:18,999 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:18,999 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:19,509 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:19,509 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:20,019 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:20,019 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:20,529 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:20,529 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:21,039 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:21,039 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:21,549 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:21,549 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:22,059 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:22,059 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:22,569 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:22,569 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:23,079 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:23,079 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:23,589 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:23,589 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:24,099 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:24,099 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:24,609 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:24,609 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:25,119 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:25,119 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:25,629 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:25,629 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:26,139 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:26,139 ERROR - java.lang.NullPointerException
+2005-09-06 01:47:26,444 DEBUG - Success
+2005-09-06 01:47:26,444 DEBUG - Success
+2005-09-06 01:47:26,444 INFO - ***** Module : Logger successfully configured
+2005-09-06 01:47:26,445 INFO - ***** Start configure module : DAO_Factory
+2005-09-06 01:47:26,445 DEBUG - Producing instance for Module: DAO_Factory; Class : ru.poker.server.dal.mysql.MySQLDAOFactory
+2005-09-06 01:47:26,468 INFO - Class:ru.poker.server.dal.mysql.MySQLPlayerDAO is created
+2005-09-06 01:47:26,468 INFO - Name:DAO_Factory
+2005-09-06 01:47:26,468 INFO - connection.url = jdbc:mysql://localhost:3306/poker?user=poker&password=ZP18em3S
+2005-09-06 01:47:26,468 INFO - ru.poker.server.dal.DAOFactory initialized with instance of : ru.poker.server.dal.mysql.MySQLDAOFactory
+2005-09-06 01:47:26,468 DEBUG - Success
+2005-09-06 01:47:26,468 INFO - ***** Module : DAO_Factory successfully configured
+2005-09-06 01:47:26,468 INFO - ***** Start configure module : Billing_Factory
+2005-09-06 01:47:26,468 DEBUG - Producing instance for Module: Billing_Factory; Class : ru.poker.server.billing.mysql.MySQLBillingFactory
+2005-09-06 01:47:26,473 INFO - Class:ru.poker.server.billing.mysql.MySQLBillingFactory is created
+2005-09-06 01:47:26,474 INFO - Name:Billing_Factory
+2005-09-06 01:47:26,474 INFO - connection.url = jdbc:mysql://localhost:3306/poker?user=poker&password=ZP18em3S
+2005-09-06 01:47:26,475 INFO - ru.poker.server.billing.BillingFactory initialized with instance of : ru.poker.server.billing.mysql.MySQLBillingFactory
+2005-09-06 01:47:26,475 DEBUG - Success
+2005-09-06 01:47:26,475 INFO - ***** Module : Billing_Factory successfully configured
+2005-09-06 01:47:26,475 INFO - ***** Start configure module : Network
+2005-09-06 01:47:26,475 DEBUG - Producing instance for Module: Network; Class : ru.poker.server.net.core.Connector
+2005-09-06 01:47:26,477 INFO - Name:Network
+2005-09-06 01:47:26,492 ERROR - Configuration error. Reason : java.net.BindException: Address already in use
+ru.poker.server.cfg.ConfigurationException: java.net.BindException: Address already in use
+	at ru.poker.server.net.core.Connector.validateCompleted(Unknown Source)
+	at ru.poker.server.cfg.AbstractXMLConfigurator.configure(Unknown Source)
+	at ru.poker.server.core.SystemConfigurator.produceInstance(Unknown Source)
+	at ru.poker.server.core.SystemConfigurator.processConfiguration(Unknown Source)
+	at ru.poker.server.core.SystemConfigurator.main(Unknown Source)
+Caused by: java.net.BindException: Address already in use
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:359)
+	at java.net.ServerSocket.bind(ServerSocket.java:319)
+	at java.net.ServerSocket.<init>(ServerSocket.java:185)
+	at java.net.ServerSocket.<init>(ServerSocket.java:97)
+	... 5 more
+2005-09-06 01:47:26,495 INFO - *** Game server is stopped. ***
+2005-09-06 08:47:26,649 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:26,649 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:27,159 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:27,159 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:27,669 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:27,669 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:28,179 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:28,179 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:28,689 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:28,689 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:29,199 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:29,199 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:29,709 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:29,709 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:30,219 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:30,219 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:30,729 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:30,729 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:31,239 INFO - Can't check connection status; error :Broken pipe
+2005-09-06 08:47:31,239 ERROR - java.lang.NullPointerException
+2005-09-06 08:47:33,886 DEBUG - Success
+2005-09-06 08:47:33,886 DEBUG - Success
+2005-09-06 08:47:33,887 INFO - ***** Module : Logger successfully configured
+2005-09-06 08:47:33,887 INFO - ***** Start configure module : DAO_Factory
+2005-09-06 08:47:33,887 DEBUG - Producing instance for Module: DAO_Factory; Class : ru.poker.server.dal.mysql.MySQLDAOFactory
+2005-09-06 08:47:33,909 INFO - Class:ru.poker.server.dal.mysql.MySQLPlayerDAO is created
+2005-09-06 08:47:33,909 INFO - Name:DAO_Factory
+2005-09-06 08:47:33,910 INFO - connection.url = jdbc:mysql://localhost:3306/poker?user=poker&password=ZP18em3S
+2005-09-06 08:47:33,910 INFO - ru.poker.server.dal.DAOFactory initialized with instance of : ru.poker.server.dal.mysql.MySQLDAOFactory
+2005-09-06 08:47:33,910 DEBUG - Success
+2005-09-06 08:47:33,910 INFO - ***** Module : DAO_Factory successfully configured
+2005-09-06 08:47:33,910 INFO - ***** Start configure module : Billing_Factory
+2005-09-06 08:47:33,910 DEBUG - Producing instance for Module: Billing_Factory; Class : ru.poker.server.billing.mysql.MySQLBillingFactory
+2005-09-06 08:47:33,915 INFO - Class:ru.poker.server.billing.mysql.MySQLBillingFactory is created
+2005-09-06 08:47:33,915 INFO - Name:Billing_Factory
+2005-09-06 08:47:33,915 INFO - connection.url = jdbc:mysql://localhost:3306/poker?user=poker&password=ZP18em3S
+2005-09-06 08:47:33,915 INFO - ru.poker.server.billing.BillingFactory initialized with instance of : ru.poker.server.billing.mysql.MySQLBillingFactory
+2005-09-06 08:47:33,915 DEBUG - Success
+2005-09-06 08:47:33,916 INFO - ***** Module : Billing_Factory successfully configured
+2005-09-06 08:47:33,916 INFO - ***** Start configure module : Network
+2005-09-06 08:47:33,916 DEBUG - Producing instance for Module: Network; Class : ru.poker.server.net.core.Connector
+2005-09-06 08:47:33,918 INFO - Name:Network
+2005-09-06 08:47:33,931 INFO - Server socket started at port = 15000
+2005-09-06 08:47:33,933 INFO - ConnectionChecker  successfully created; check period: 500
+2005-09-06 08:47:33,933 DEBUG - Success
+2005-09-06 08:47:33,933 INFO - ***** Module : Network successfully configured
+2005-09-06 08:47:33,933 INFO - ***** Start configure module : Protocol
+2005-09-06 08:47:33,933 DEBUG - Producing instance for Module: Protocol; Class : ru.poker.server.net.protocol.core.ProtocolFactoryImpl
+2005-09-06 08:47:33,938 INFO - Name:Protocol
+2005-09-06 08:47:33,938 DEBUG - Success
+2005-09-06 08:47:33,938 INFO - ***** Module : Protocol successfully configured
+2005-09-06 08:47:33,938 INFO - ***** Start configure module : Casino
+2005-09-06 08:47:33,938 DEBUG - Producing instance for Module: Casino; Class : ru.poker.server.casino.core.DefaultCasino
+2005-09-06 08:47:33,945 INFO - Casino: null successfully created
+2005-09-06 08:47:33,945 INFO - Name:Casino
+2005-09-06 08:47:33,948 INFO - ru.poker.server.casino.Casino initialized with instance of : ru.poker.server.casino.core.DefaultCasino
+2005-09-06 08:47:33,954 INFO - ru.poker.server.net.HandlerFactory initialized with instance of : ru.poker.server.casino.core.DefaultCasino$DefaultHandlerFactory
+2005-09-06 08:47:33,954 DEBUG - Success
+2005-09-06 08:47:33,954 INFO - ***** Module : Casino successfully configured
+2005-09-06 08:47:33,955 INFO - Success. All modules are configured and ready to start
+2005-09-06 08:47:33,955 INFO - +++++ Starting module : Casino
+2005-09-06 08:47:33,955 INFO - +++++ Module : Casino successfully started
+2005-09-06 08:47:33,955 INFO - +++++ Starting module : Logger
+2005-09-06 08:47:33,955 INFO - +++++ Module : Logger successfully started
+2005-09-06 08:47:33,955 INFO - +++++ Starting module : DAO_Factory
+2005-09-06 08:47:33,955 INFO - +++++ Module : DAO_Factory successfully started
+2005-09-06 08:47:33,955 INFO - +++++ Starting module : Network
+2005-09-06 08:47:33,955 INFO - +++++ Module : Network successfully started
+2005-09-06 08:47:33,956 INFO - +++++ Starting module : Billing_Factory
+2005-09-06 08:47:33,956 INFO - +++++ Module : Billing_Factory successfully started
+2005-09-06 08:47:33,956 INFO - +++++ Starting module : Protocol
+2005-09-06 08:47:33,956 INFO - +++++ Module : Protocol successfully started
+2005-09-06 08:47:33,956 INFO - Success. All modules are started
+2005-09-06 08:47:33,956 INFO - *** Game server is started. ***
+2005-09-06 08:47:33,956 INFO - DefaultCasinoControlerThread start.
+2005-09-06 08:47:33,956 DEBUG - Checking start
+2005-09-06 08:47:34,285 DEBUG - Checking finished
+2005-09-06 08:47:34,286 DEBUG - New room found
+2005-09-06 08:47:34,286 INFO - new room id:1 found
+2005-09-06 08:47:34,289 INFO - Create new Room id:1 minLimit:2 increment:2
+2005-09-06 08:47:34,297 INFO - Add module Table id:0 minLimit:2 increment:2
+2005-09-06 08:47:34,297 INFO - Create new Table id:0 minLimit:2 increment:2
+2005-09-06 08:47:34,298 INFO - new room id:2 found
+2005-09-06 08:47:34,298 INFO - Create new Room id:2 minLimit:4 increment:4
+2005-09-06 08:47:34,298 INFO - Add module Table id:1 minLimit:4 increment:4
+2005-09-06 08:47:34,298 INFO - Create new Table id:1 minLimit:4 increment:4
+2005-09-06 08:47:34,298 INFO - new room id:3 found
+2005-09-06 08:47:34,298 INFO - Create new Room id:3 minLimit:6 increment:6
+2005-09-06 08:47:34,298 INFO - Add module Table id:2 minLimit:6 increment:6
+2005-09-06 08:47:34,298 INFO - Create new Table id:2 minLimit:6 increment:6
+2005-09-06 08:47:34,298 INFO - new room id:4 found
+2005-09-06 08:47:34,298 INFO - Create new Room id:4 minLimit:8 increment:8
+2005-09-06 08:47:34,298 INFO - Add module Table id:3 minLimit:8 increment:8
+2005-09-06 08:47:34,298 INFO - Create new Table id:3 minLimit:8 increment:8
+2005-09-06 08:47:34,298 INFO - new room id:5 found
+2005-09-06 08:47:34,298 INFO - Create new Room id:5 minLimit:10 increment:10
+2005-09-06 08:47:34,299 INFO - Add module Table id:4 minLimit:10 increment:10
+2005-09-06 08:47:34,299 INFO - Create new Table id:4 minLimit:10 increment:10
+2005-09-06 08:48:03,344 INFO - SocketListener start. Remoute address = /70.6.40.163:32771
+2005-09-06 08:48:03,344 INFO - add connection: ru.poker.server.net.core.ConnectionImpl@1034bb5
+2005-09-06 08:48:03,349 DEBUG - New connection accepted
+2005-09-06 08:48:35,867 DEBUG -  recieve; request:Instruction command = rqLogin arg = ALEX arg = 123
+2005-09-06 08:48:35,920 INFO - authorize user login: ALEX pwd: 123
+2005-09-06 08:48:35,921 DEBUG - Player id:1 recieve; request:Instruction command = rqLogin arg = ALEX arg = 123 send; response:Instruction command = rsLogin arg = ack
+2005-09-06 08:48:36,959 DEBUG -  recieve; request:Instruction command = rqProfile arg = ALEX
+2005-09-06 08:48:36,960 DEBUG - Player id:1 recieve; request:Instruction command = rqProfile arg = ALEX send; response:Instruction command = rsProfile arg = 1000 arg = 6 arg = 1
+2005-09-06 08:48:39,509 DEBUG -  recieve; request:Instruction command = rqRooms
+2005-09-06 08:48:39,510 DEBUG - Player id:1 recieve; request:Instruction command = rqRooms send; response:Instruction command = rsRooms arg = 5 arg = room5 arg = 10 arg = 10 arg = 4 arg = room4 arg = 8 arg = 8 arg = 3 arg = room3 arg = 6 arg = 6 arg = 2 arg = room2 arg = 4 arg = 4 arg = 1 arg = room1 arg = 2 arg = 2
+2005-09-06 08:48:41,549 DEBUG -  recieve; request:Instruction command = rqTables arg = 5
+2005-09-06 08:48:41,549 DEBUG - Player id:1 recieve; request:Instruction command = rqTables arg = 5 send; response:Instruction command = rsTables arg = 4 arg = 0
+2005-09-06 08:48:43,589 DEBUG -  recieve; request:Instruction command = rqTableFull arg = 4
+2005-09-06 08:48:43,589 DEBUG - Player id:1 recieve; request:Instruction command = rqTableFull arg = 4 send; response:Instruction command = rsTableFull
+2005-09-06 08:48:50,219 DEBUG -  recieve; request:Instruction command = rqJoinTable arg = 4 arg = 0
+2005-09-06 08:48:50,219 DEBUG - table id:4 player: 1 seatId: 0 registered
+2005-09-06 08:48:50,221 DEBUG - player id:1 send; request:Instruction command = rqPlayerIn arg = 0 arg = alex arg = 1000 arg = 6 arg = 1
+2005-09-06 08:48:50,221 DEBUG - table id: 4 notify player id: 1
+2005-09-06 08:48:50,222 DEBUG - Player id:1 recieve; request:Instruction command = rqJoinTable arg = 4 arg = 0 send; response:Instruction command = rsJoinTable arg = ack
+2005-09-06 08:48:51,749 DEBUG -  recieve; request:Instruction command = rsPlayerIn
+2005-09-06 08:48:51,749 DEBUG - Player id:1 recieve; request:Instruction command = rsPlayerIn
+2005-09-06 08:48:53,921 DEBUG -  recieve; request:Instruction command = rqPlayerOut arg = 0
+2005-09-06 08:48:53,921 DEBUG - table id:4 player: 1 seatId: 0 unregistered
+2005-09-06 08:48:53,960 DEBUG - Player id:1 recieve; request:Instruction command = rqPlayerOut arg = 0
+2005-09-06 08:48:54,469 DEBUG -  recieve; request:Instruction command = rqGameOver
+2005-09-06 08:48:54,469 INFO - remove connection: ru.poker.server.net.core.ConnectionImpl@1034bb5
+2005-09-06 08:48:54,469 INFO - Connection close
+2005-09-06 08:48:54,469 DEBUG - Player id:1 recieve; request:Instruction command = rqGameOver
+2005-09-06 08:49:04,139 INFO - SocketListener start. Remoute address = /70.6.40.163:32772
+2005-09-06 08:49:04,139 INFO - add connection: ru.poker.server.net.core.ConnectionImpl@10ef90c
+2005-09-06 08:49:04,139 DEBUG - New connection accepted
+2005-09-06 08:49:34,802 DEBUG -  recieve; request:Instruction command = rqLogin arg = ALEX arg = 123
+2005-09-06 08:49:34,848 INFO - authorize user login: ALEX pwd: 123
+2005-09-06 08:49:34,848 DEBUG - Player id:1 recieve; request:Instruction command = rqLogin arg = ALEX arg = 123 send; response:Instruction command = rsLogin arg = ack
+2005-09-06 08:49:35,859 DEBUG -  recieve; request:Instruction command = rqProfile arg = ALEX
+2005-09-06 08:49:35,859 DEBUG - Player id:1 recieve; request:Instruction command = rqProfile arg = ALEX send; response:Instruction command = rsProfile arg = 1000 arg = 6 arg = 1
+2005-09-06 08:49:38,638 DEBUG -  recieve; request:Instruction command = rqRooms
+2005-09-06 08:49:38,639 DEBUG - Player id:1 recieve; request:Instruction command = rqRooms send; response:Instruction command = rsRooms arg = 5 arg = room5 arg = 10 arg = 10 arg = 4 arg = room4 arg = 8 arg = 8 arg = 3 arg = room3 arg = 6 arg = 6 arg = 2 arg = room2 arg = 4 arg = 4 arg = 1 arg = room1 arg = 2 arg = 2
+2005-09-06 08:49:41,201 DEBUG -  recieve; request:Instruction command = rqTables arg = 5
+2005-09-06 08:49:41,201 DEBUG - Player id:1 recieve; request:Instruction command = rqTables arg = 5 send; response:Instruction command = rsTables arg = 4 arg = 0
+2005-09-06 08:49:42,898 DEBUG -  recieve; request:Instruction command = rqTableFull arg = 4
+2005-09-06 08:49:42,898 DEBUG - Player id:1 recieve; request:Instruction command = rqTableFull arg = 4 send; response:Instruction command = rsTableFull
+2005-09-06 08:49:48,509 DEBUG -  recieve; request:Instruction command = rqJoinTable arg = 4 arg = 0
+2005-09-06 08:49:48,509 DEBUG - table id:4 player: 1 seatId: 0 registered
+2005-09-06 08:49:48,509 DEBUG - player id:1 send; request:Instruction command = rqPlayerIn arg = 0 arg = alex arg = 1000 arg = 6 arg = 1
+2005-09-06 08:49:48,509 DEBUG - table id: 4 notify player id: 1
+2005-09-06 08:49:48,509 DEBUG - Player id:1 recieve; request:Instruction command = rqJoinTable arg = 4 arg = 0 send; response:Instruction command = rsJoinTable arg = ack
+2005-09-06 08:49:49,529 DEBUG -  recieve; request:Instruction command = rsPlayerIn
+2005-09-06 08:49:49,529 DEBUG - Player id:1 recieve; request:Instruction command = rsPlayerIn
+2005-09-06 08:52:04,473 DEBUG -  recieve; request:Instruction command = rqPlayerOut arg = 0
+2005-09-06 08:52:04,474 DEBUG - table id:4 player: 1 seatId: 0 unregistered
+2005-09-06 08:52:04,492 DEBUG - Player id:1 recieve; request:Instruction command = rqPlayerOut arg = 0
+2005-09-06 08:52:04,999 DEBUG -  recieve; request:Instruction command = rqGameOver
+2005-09-06 08:52:04,999 INFO - remove connection: ru.poker.server.net.core.ConnectionImpl@10ef90c
+2005-09-06 08:52:04,999 INFO - Connection close
+2005-09-06 08:52:04,999 DEBUG - Player id:1 recieve; request:Instruction command = rqGameOver
+2005-09-06 08:52:14,954 INFO - SocketListener start. Remoute address = /70.6.40.163:32773
+2005-09-06 08:52:14,954 INFO - add connection: ru.poker.server.net.core.ConnectionImpl@a97b0b
+2005-09-06 08:52:14,954 DEBUG - New connection accepted
+2005-09-06 08:52:48,099 DEBUG -  recieve; request:Instruction command = rqLogin arg = ALEX arg = 123
+2005-09-06 08:52:48,128 INFO - authorize user login: ALEX pwd: 123
+2005-09-06 08:52:48,129 DEBUG - Player id:1 recieve; request:Instruction command = rqLogin arg = ALEX arg = 123 send; response:Instruction command = rsLogin arg = ack
+2005-09-06 08:52:49,389 DEBUG -  recieve; request:Instruction command = rqProfile arg = ALEX
+2005-09-06 08:52:49,389 DEBUG - Player id:1 recieve; request:Instruction command = rqProfile arg = ALEX send; response:Instruction command = rsProfile arg = 1000 arg = 6 arg = 1
+2005-09-06 08:53:09,158 INFO - SocketListener start. Remoute address = /70.6.0.94:32776
+2005-09-06 08:53:09,158 INFO - add connection: ru.poker.server.net.core.ConnectionImpl@12152e6
+2005-09-06 08:53:09,158 DEBUG - New connection accepted
+2005-09-06 08:54:26,314 DEBUG -  recieve; request:Instruction command = rqLogin arg = PAUL arg = 123
+2005-09-06 08:54:26,337 INFO - authorize user login: PAUL pwd: 123
+2005-09-06 08:54:26,337 DEBUG - Player id:2 recieve; request:Instruction command = rqLogin arg = PAUL arg = 123 send; response:Instruction command = rsLogin arg = ack
