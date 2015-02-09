@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<cross-domain-policy>
+<allow-access-from domain="www.engine37.com" />
+<allow-access-from domain="engine37.com" />
+<allow-access-from domain="www.flauntr.net" />
+<allow-access-from domain="flauntr.net" />
+<allow-access-from domain="www.celebrationphotography.net" />
+<allow-access-from domain="celebrationphotography.net" />
+</cross-domain-policy>
