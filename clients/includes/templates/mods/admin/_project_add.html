@@ -1,0 +1,34 @@
+<div class="container">
+	<div class="container-c">
+		<div class="wrap">
+			{include file="mods/_logout.html"}
+			<h1><a href="{$siteAdr}account.php?mod=admin">Administration</a> | Add project</h1>
+				
+				{if $errs}
+				    <font color="#990000">
+					<b>Errors:</b><br />
+					{foreach key=key item=item from=$errs}
+					    - {$item}<br />
+					{/foreach}
+					</font>
+					<div class="spacer s15"><!-- --></div>
+				{/if}
+				
+            <form method="post" name="fmx" id="fmx" action="{$siteAdr}account.php">
+			<input type="hidden" name="mod" value="add_proj" />
+			<div class="b-form">
+				<label>Project name</label>
+				<input type="text" name="eform[name]" class="input w350" />
+				<div class="spacer s20"><!-- --></div>
+			</div>	
+			<div class="b-form">
+				<div class="spacer s5"><!-- --></div>
+				<a href="javascript: document.fmx.submit();"><img src="{$imgDir}b-create.gif" alt="" /></a>
+				&nbsp;<a href="javascript: document.location='{$siteAdr}account.php?mod=projects';"><img src="{$imgDir}b-cancel.gif" alt="" /></a>
+			</div>
+            </form>
+			<br />
+            {include file="mods/_footer.html"}
+		</div>
+	</div>
+</div>

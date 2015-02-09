@@ -1,0 +1,23 @@
+{*Display <strong>{$range.0+1}-{$range.1}</strong> of <strong>{$range.2}</strong> items &nbsp;&nbsp;&nbsp;*}
+
+<table border="0" cellpadding="5" cellspacing="5">
+<tr>
+
+<td class="black" align="center" bgcolor="#edeef0" width="15">{if $lfirst}<a href="{$lfirst}">First</a>{else}First{/if}</td>
+
+
+{section name = i loop = $pages}
+{if $page == $pages[i].page}
+ <td align="center" bgcolor="#6EB4EE" width="15"><font color="#ffffff"><b>{$pages[i].page}</b></font></td>
+{else}
+<td class="black" align="center" bgcolor="#edeef0" width="15"><a href="{$pages[i].link}">{$pages[i].page}</a></td>
+{/if}
+{/section}
+
+
+<td class="black" align="center" bgcolor="#edeef0" width="15">{if $llast}<a href="{$llast}">Last:{else}Last{/if}</a></td>
+
+
+
+</tr>
+</table>

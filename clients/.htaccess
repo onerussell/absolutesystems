@@ -1,0 +1,12 @@
+AddType application/zip .sql .txt 
+
+RewriteEngine On
+Options +FollowSymlinks
+
+
+RewriteBase /clients/
+RewriteCond %{REQUEST_URI} !(includes|/files|templates|\.php|\.js|\.swf|\.html|\.txt)/?
+RewriteRule ^(.*)$ account.php?mod=clients&path=$1&%{QUERY_STRING} [L]
+
+ErrorDocument 403 /404.php
+ErrorDocument 404 /404.php

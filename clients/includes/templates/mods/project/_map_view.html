@@ -1,0 +1,22 @@
+<div  style="height:100%;margin-right:6px;margin-left:6px">
+    {include file="mods/_logout.html"}
+	<div class="menu-right">
+		<a href="{$siteAdr}{$pg.link}{*{$siteAdr}account.php?id={$pg.id}*}">work view</a>
+		<a href="{$siteAdr}{$pg.link}/history{*{$siteAdr}account.php?id={$pg.id}&amp;action=history*}">history view</a>
+		<a href="{$siteAdr}{$pg.link}/map" class="on">sitemap view</a>
+	</div>
+	<h1><a href="{$siteAdr}index.php?mod=project">Projects</a> | {$pg.name}</h1>
+	{*$st*}
+	<div id="main" style="height:88%">
+		  You need to have the Flash Player installed. Click here to download the Flash Player.
+	</div>
+	<script type="text/javascript" src="{$jsDir}swfobject.js"></script>	
+	<script type="text/javascript">
+	   var so = new SWFObject("{$siteAdr}map/Sitemap.swf", "main", "100%", "100%", "8", "#FFFFFF");
+	   so.addVariable("project_id", {$pg.id});
+	   so.addVariable("path_to_xml", "http://www.engine37.com{$siteAdr}gxml.php?id=");
+	   so.useExpressInstall('{$siteAdr}map/expressinstall.swf');
+	   so.write("main");
+	</script>
+	{include file="mods/_footer.html"}
+</div>

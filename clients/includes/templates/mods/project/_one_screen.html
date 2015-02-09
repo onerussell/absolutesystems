@@ -1,0 +1,175 @@
+<script src="{$jsDir}JsHttpRequest.js" type="text/javascript"></script>
+<script language"javascript"  type="text/javascript">
+    var ajaxPath = '{$siteAdr}ajax.php';
+</script>
+<script type="text/javascript" src="{$jsDir}onescreen.js"></script>
+
+
+<div class="center1" id="topim"><center>
+{if !$UserInfo}
+     <a href="javascript: ShowHideBlock(1);"><img src="{$siteAdr}{$image_dir}/{$scr.image}" alt="" id="imfull" /></a>
+{/if}             
+  
+</center></div>
+
+
+<div class="container" style="width: 1024px !important;" id="maincont">
+	<div class="container-c">
+		<div class="wrap">
+            {include file="mods/_logout.html"}
+		    <h1><a href="{$siteAdr}{*index.php?mod=project*}">Projects</a> | {$pg.name}</h1> 
+            
+
+<div style="float:left;">
+<h3>
+
+{if $prev_screen_id}
+<a href="{$siteAdr}account.php?sid={$prev_screen_id}">&lt;prev&nbsp;&nbsp;&nbsp;</a>
+{else}
+<span style="color:grey">&lt;prev&nbsp;&nbsp;&nbsp;</span>
+{/if}		
+
+<a href="{$siteAdr}{$pg.link}{*{$siteAdr}account.php?id={$pg.id}*}">Overview</a> / {if $scr_parent}<a href="{$siteAdr}{$pg.link}/{$scr_parent.olink}">{$scr_parent.name}</a> / {$scr.name}{else}<a href="{$siteAdr}{$pg.link}/{$scr.olink}">{$scr.name}</a> / Rev0{/if}
+
+{if $next_screen_id}
+<a href="{$siteAdr}account.php?sid={$next_screen_id}">&nbsp;&nbsp;&nbsp;next&gt;</a>
+{else}
+<span style="color:grey">&nbsp;&nbsp;&nbsp;next&gt;</span>
+{/if}		
+
+</h3>
+</div>
+			<div style="float:right;">
+			<h3>
+
+                {if $previmage && $stop_this}<a href="javascript:void(0);" onclick="_v('old').style.display = ('block' ==  _v('old').style.display) ? 'none' : 'block'; _v('compare').innerHTML = ('block' ==  _v('old').style.display) ? 'hide prev revision' : 'compare with prev revision';"><span id="compare">compare with prev revision</span></a>&nbsp;&nbsp;{/if}
+		  	    {if $can_edit && $scr.must_approve && ( 0 == $UserInfo.status || 2 == $UserInfo.status )}<a href="javascript: if (confirm('Approve screen for client view?')) Go('{$siteAdr}account.php?mod=approve_view_screen&id={$pg.id}&sid={$scr.id}');"><img src="{$imgDir}i-plus.gif" style="vertical-align: middle;" alt="" /> Approve</a>&nbsp;&nbsp;&nbsp;{/if}
+			    {if $can_edit && (1 != $UserInfo.status )}<a href="{$siteAdr}account.php?mod=add_screen&amp;id={$pg.id}&amp;sid={$scr.id}&amp;back={$scr.id}"><img src="{$imgDir}i-edit.gif" style="vertical-align: middle;" alt="" /> Edit</a>&nbsp;&nbsp;&nbsp;{/if}
+			    {if $can_edit && (0 == $UserInfo.status || 2 == $UserInfo.status)}<a href="javascript: if (confirm('Delete screen?')) Go('{$siteAdr}account.php?mod=del_screen&sid={$scr.id}')"><img src="{$imgDir}i-delete.gif" style="vertical-align: middle;" alt="" /> Del</a>{/if}
+
+			</h3>
+
+</div>
+			{* 
+			<div class="comment-top">You can click anywhere on the screenshot to place a text comment regarding a specific detail. You can also write the general comment under  the screenshot, clicking on Post a new comment.<br />Or you combine both.</div>
+			<div class="spacer"><!-- --></div>
+            *}
+			
+            {if !$UserInfo}
+                <div class="hidden"><center><a href="#{*javascript: ShowHideBlock(1);*}"><img src="{$siteAdr}{$image_dir}/{$scr.image}" alt=""{* id="imfull"*} /></a></center></div>
+            {else}
+			     <br /><br />
+				 <center>
+				 <div id="iout" ></div> 
+                 <script type="text/javascript" src="{$jsDir}swfobject.js"></script>	     
+                 <script type="text/javascript">
+	             var so = new SWFObject("{$siteAdr}map/VisualComments.swf", "iout", "{$imsize.0}", "{$imsize.1}", "8", "#FFFFFF");
+                 so.addVariable("screen_id", "{$scr.id}");
+                 so.addVariable("image_path", "http://{$DOMEN}{$siteAdr}{$image_dir}/{$scr.image}");
+	             {if $vis_comment_id}so.addVariable("selected_comment_id", "{$vis_comment_id}");{/if}
+				 so.useExpressInstall('{$siteAdr}map/expressinstall.swf');
+	             so.write("iout");
+                 </script>
+				 </center>
+			{/if}
+
+            <div class="spacer s15"><!-- --></div>
+            <div class="spacer s10"><!-- --></div>
+			<div class="fr"><h3>{*{if $previmage}<a href="javascript:void(0);" onclick="_v('old').style.display = ('block' ==  _v('old').style.display) ? 'none' : 'block'; _v('compare').innerHTML = ('block' ==  _v('old').style.display) ? 'hide previous revision' : 'compare with previous revision';"><span id="compare">compare with previous revision</span></a>&nbsp;&nbsp;{/if}*}<a href="{$siteAdr}{$pg.link}/{if $scr_parent}{$scr_parent.olink}{else}{$scr.olink}{/if}">View history</a> &nbsp; {if 1 != $UserInfo.status && ("0"  <= $UserInfo.status && "10" >= $UserInfo.status)}<a href="{$siteAdr}account.php?mod=add_screen&amp;id={$pg.id}&amp;parent={if $scr.parent == 0}{$scr.id}{else}{$scr.parent}{/if}&amp;back={$scr.id}">Upload new version</a>{/if}</h3></div>
+			<div class="fl"><h3><a {if $prevnext.0}href="{$siteAdr}{$pg.link}/{$prevnext.0}"{/if}{if !$prevnext.0} class="off"{/if}>&lt; previous</a> &nbsp; <strong>{if 0 == $scr.parent}Rev0{else}{$scr.name}{/if}</strong> &nbsp; <a {if $prevnext.1}href="{$siteAdr}{$pg.link}/{$prevnext.1}"{/if}{if !$prevnext.1} class="off"{/if}>next &gt;</a></h3></div>
+			<div class="spacer"><!-- --></div>
+			
+			{if 2 >= $UserInfo.status && (!$scr_aprove || $scr_aprove == $scr.id || 0 == $UserInfo.status || 2 == $UserInfo.status)}
+			    {if $can_edit && 0 <= $UserInfo.status &&  2 >= $UserInfo.status && 0 == $scr.is_approve}<a href="javascript: if (confirm('Approve screen as final?')) Go('{$siteAdr}account.php?mod=approve_screen&sid={$scr.id}');"><img src="{$imgDir}approve.gif" alt="Final Approve" /></a>{else}<img src="{$imgDir}approve_no.gif" alt="Final Approve" /> {if $can_edit && (0 == $UserInfo.status ||  2 == $UserInfo.status)}&nbsp;&nbsp;<a href="javascript: if (confirm('Reverse screen Approval?')) Go('{$siteAdr}account.php?mod=unapprove_screen&sid={$scr.id}')";><img src="{$imgDir}reverse.gif" alt="Reverse Approval" /></a>{/if}{/if}
+			{/if} 
+			<div class="spacer s10"><!-- --></div>
+			
+			{if $can_edit}		
+			<a href="#new"><b>&nbsp;Post a new comment</b></a>
+			<div class="spacer s10"><!-- --></div>
+            <a name="com" />
+			
+			{foreach name=n key=k item=i from=$cl}
+			<div class="comment{if $i.internal} comment-h{elseif 2 < $i.ustatus} comment-x{/if}" id="col_{$i.id}">
+				<div class="comment-info">
+					<div style="float: right" class="com-edit">
+					{*$UserInfo.uid == $i.uid || *}{if ($UserInfo.status == 0 || $UserInfo.status == 2)}<a href="javascript: EditCom({$i.id});"><img src="{$imgDir}b_edit.gif" alt="Edit" /> Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript: if (confirm('Delete commentary?')) Go('{$siteAdr}account.php?sid={$scr.id}&del={$i.id}');"><img src="{$imgDir}b_del.gif" alt="Edit" /> Delete</a>{/if}
+					</div>
+					<div class="comment-img"><img src="{if $i.image}{$siteAdr}{$image_dir}/{$i.image}{else}{$imgDir}i-client_default.png{/if}" alt="{$i.name} {$i.lname}" /></div>
+					<b>{$i.login} {assign var="ov" value=$i.status}[{$status_ar.$ov}] wrote</b><br />{$i.pdate} [#{$i.id}]
+				</div>
+				<span id="com_{$i.id}">
+				<div class="comment-text" >
+					{$i.descr|nl2br}
+					{if $i.attach}<br /><br /><img src="{$imgDir}i-attach.gif" alt="" />&nbsp;<a href="{$siteAdr}files/images/{$i.attach}" target="_blank">{$i.attach}</a>{/if}
+					<div class="spacer s10"><!-- --></div>
+					{*
+					{if 2 < $i.ustatus}
+					<a href="#"><img src="{$imgDir}b-submit.gif" alt="Submit" /></a>
+					{/if}
+					*}
+				</div>
+				</span>
+				<span id="ecom_{$i.id}"></span>
+				<a name="com_{$i.id}" />{if $smarty.foreach.n.last}<a name="last_com" />{/if}	
+			</div>
+			<div class="spacer s10"><!-- --></div>
+			{/foreach}
+
+
+            {if (0 == $scr.is_approve && 0 == $scr_aprove) || (($UserInfo.status == 0 || $UserInfo.status == 2))}
+            {if $cl}
+			<div class="spacer s10"><!-- --></div>
+			<a href="#new"><b>&nbsp;Post a new comment</b></a>
+			<div class="spacer s10"><!-- --></div>
+            {/if}
+			<div class="comment">
+				<div class="comment-info">
+					<div class="comment-img"><img src="{if $UserInfo.image}{$siteAdr}{$image_dir}/{$UserInfo.image}{else}{$imgDir}i-client_default.png{/if}" alt="{$UserInfo.fname} {$UserInfo.lname}" /></div>
+					<b>{$UserInfo.login} {assign var="ov" value=$UserInfo.status}[{$status_ar.$ov}]</b><br />{*$cdate*}
+				</div>
+				<div class="comment-edit">
+					<form id="fmx" method="post" action="{$siteAdr}account.php">
+					<input type="hidden" name="sid" value="{$scr.id}" />
+					<input type="hidden" name="action" value="addcom" />
+					<a name="new" />
+					<span id="errt" style="color:#990000; font-weight: bold"></span>
+					<textarea name="eform[comment]" id="comment" onclick="_v('errt').innerHTML ='';"></textarea>
+                    <div class="spacer s5"><!-- --></div>
+					<div class="spacer s5"><!-- --></div>
+					<a href="javascript: ShowAt();" id="al" style="padding-top: 8px;">&nbsp;<b>+ Add file</b>&nbsp;</a>
+					<div class="spacer s5"><!-- --></div>
+					<div id="main">
+				        You need to have the Flash Player installed. Click <a href="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash&promoid=BIOW">here</a> 
+			        </div>
+					<div class="spacer s5"><!-- --></div>	
+				    <script type="text/javascript" src="{$jsDir}swfobject.js"></script>	
+			        <script type="text/javascript">
+			            var so1 = new SWFObject("{$siteAdr}e37uploader.swf?config={$siteAdr}e37uploader_at.php", "main", "405", "130", "9", "#FFFFFF");
+			            so1.addParam("allowFullScreen", "false");
+			            so1.addParam("scale", "noscale");  
+			            so1.write("main");
+			        </script>	
+				  					
+					<div class="spacer s5"><!-- --></div>
+					<a href="javascript: ComSubm();"><img src="{$imgDir}b-submit.gif" alt="Submit" class="v" /></a> &nbsp; &nbsp;{if 1 != $UserInfo.status} <input type="checkbox" class="v" name="eform[internal]" value="1" />&nbsp;Internal use{/if}
+				    </form>
+				</div>
+			</div>
+			{/if}
+			{/if}
+			<div class="spacer s10"><!-- --></div>
+			{include file="mods/_footer.html"}
+		</div>
+	</div>
+</div>
+
+<div id="subcont" style="display: none;" style="vertical-align: middle;">
+    <a href="javascript: ShowHideBlock(0);"><img id="imfree" /></a>
+</div>
+{if $can_edit}
+<script language="javascript">
+    if (_v('main'))
+	    _v('main').style.display = 'none';
+</script>
+{/if}

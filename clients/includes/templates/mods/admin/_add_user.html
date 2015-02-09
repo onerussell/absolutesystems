@@ -1,0 +1,89 @@
+
+<div class="container">
+	<div class="container-c">
+		<div class="wrap">
+			{include file="mods/_logout.html"}
+			<h1><a href="{$siteAdr}account.php?mod=admin">Administration</a> | {if $id}Edit{else}Add{/if} user</h1>
+
+			<div class="b-form">
+				{if $errs}
+				    <font color="#990000">
+					<b>Errors:</b><br />
+					{foreach key=key item=item from=$errs}
+					    - {$item}<br />
+					{/foreach}
+					</font>
+					<div class="spacer s15"><!-- --></div>
+				{/if}
+							
+                <form name="fma" method="post" action="{$siteAdr}account.php" enctype="multipart/form-data">
+				<input type="hidden" name="mod" value="add_user" />
+	            {if 0 < $id}
+				<input type="hidden" name="id" value="{$id}" />
+				{/if}
+
+				<label>First Name</label>
+				<input type="text" name="einfo[name]" value="{$einfo.name}" class="input w350" />
+				<div class="spacer s20"><!-- --></div>
+							
+				<label>Last Name</label>
+				<input type="text" name="einfo[lname]" value="{$einfo.lname}" class="input w350" />
+				<div class="spacer s20"><!-- --></div>							
+							
+				<label>E-mail</label>
+				<input type="text" name="einfo[email]" value="{$einfo.email}" class="input w430" />
+				<div class="spacer s20"><!-- --></div>
+
+				<label>User name</label>
+				<input type="text" name="einfo[login]" value="{$einfo.login}" class="input w350"{if $einfo.login == 'admin'} readonly="true"{/if} />
+				<div class="spacer s3"><!-- --></div>
+				Use only letters and numbers. Must be<br />between 4 and 20 characters long.
+				<div class="spacer s20"><!-- --></div>
+
+				{if !$id}		
+				<label>Password</label>					
+				<input type="password" name="einfo[pass]" value="{if !$pass_err}{$einfo.pass}{/if}" class="input w350" />
+				<div class="spacer s20"><!-- --></div>
+				<label>Confirm Password</label>		
+				<input type="password" name="einfo[pass2]" value="{if !$pass_err}{$einfo.pass2}{/if}" class="input w350" />
+                <div class="spacer s20"><!-- --></div>
+				{else}
+				<label>Password</label>					
+				<input type="password" name="einfo[pass]" value="" class="input w350" />
+				<div class="spacer s20"><!-- --></div>
+				<label>Confirm Password</label>		
+				<input type="password" name="einfo[pass2]" value="" class="input w350" />
+		        <div class="spacer s3"><!-- --></div>
+				Do not change a field with the password if you don't want to change the password	
+                <div class="spacer s20"><!-- --></div>						
+				{/if}
+				
+				{if $einfo.login == 'admin'}
+				<input type="hidden" name="einfo[status]" value="0" />
+				{else}
+				<label>User Type</label>
+				<select name="einfo[status]">
+				    {foreach key=k item=i from=$status_ar}
+					<option value="{$k}"{if $k == $einfo.status} selected="selected"{elseif ('' == $einfo.status) && 1 == $k} selected="selected"{/if}>{$i}</option>
+					{/foreach}
+            	</select>
+				<div class="spacer s20"><!-- --></div>	
+				{/if}
+				<label>Assign to project</label>
+				{foreach key=k item=i from=$projects}
+				{assign var="ov" value=$i.id}
+				<input type="checkbox" name="einfo[proj][{$ov}]" value="1"{if $einfo.proj.$ov} checked="checked"{/if} /> {$i.name}<br />
+				{/foreach}
+				<div class="spacer s20"><!-- --></div>
+                
+				<label>User Photo</label>
+				<input type="file" name="upl" />{if $einfo.image} <img src="{$siteAdr}{$image_dir}/{$einfo.image}" /> <a href="javascript: if (confirm('Delete photo?'))Go('{$siteAdr}account.php?mod=add_user&id={$id}&delp=1');">Delete</a>{/if}
+				<div class="spacer s20"><!-- --></div>
+				<a href="javascript: document.fma.submit();"><img src="{$imgDir}{if !$id}b-create.gif{else}b-update.gif{/if}" alt="Submit" /></a>
+				&nbsp;<a href="javascript: document.location='{$siteAdr}account.php?mod=users';"><img src="{$imgDir}b-cancel.gif" alt="" /></a>
+			    </form>
+			</div>
+            {include file="mods/_footer.html"}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,105 @@
+
+<script type='text/javascript' src='{$jsDir}prototype.js'></script>
+<script type='text/javascript' src='{$jsDir}prototip.js'></script>
+
+<link rel="stylesheet" type="text/css" href="{$jsDir}css/prototip.css"/>
+
+{literal}
+<script type='text/javascript'>
+function createDemos() {
+
+//<![CDATA[
+{/literal}
+
+{section name=i loop=$hist}
+{if $hist[i].cid>0 && $hist[i].action == 'Add Comment'}
+{if $hist[i].commentid neq 0}
+{literal}
+new Tip('info{/literal}{$hist[i].commentid}{literal}', { ajax: 
+{url:'comment.php?idc={/literal}{$hist[i].commentid}{literal}'}, style: 
+'default', delay:0.5,offset: {x:14,y:14},  border:1, radius:3
+});
+
+{/literal}
+
+{elseif $hist[i].action == 'Upload Screen'}
+{literal}
+{/literal}
+
+{/if}
+{/if}
+{/section}
+{literal}
+//]]>
+{/literal}
+}
+
+document.observe('dom:loaded', createDemos);
+
+
+</script>
+
+<div class="container">
+	<div class="container-c">
+		<div class="wrap">
+		    {include file="mods/_logout.html"}
+			<h1>Projects{if 0 == $UserInfo.status} | <a href="{$siteAdr}account.php?mod=admin">Administration</a>{/if}</h1>
+
+			<div class="main-project-list">
+				{section name=i loop=$pl}
+				<div class="main-project">
+					<a href="{$siteAdr}{$pl[i].link}{*account.php?id={$pl[i].project_id}*}"><img src="{if $pl[i].image}{$siteAdr}{$image_dir}{$resize_dir}/{$pl[i].image}{else}{$imgDir}new_proj.gif{/if}" alt="" /></a>
+					<a href="{$siteAdr}{$pl[i].link}{*account.php?id={$pl[i].project_id}*}">{$pl[i].name}</a><br />{if $pl[i].last_upd}updated on {$pl[i].last_upd}{/if}
+				</div>
+				{if $smarty.section.i.index_next mod 2 == 0 && !$smarty.section.i.first}
+				<div class="spacer s5"><!-- --></div>
+				{else}
+				<div class="main-project-sp"><!-- --></div>	
+				{/if}
+				{sectionelse}
+				No projects
+				{/section}
+				<div class="spacer"><!-- --></div>
+			</div>
+            {*if $hist*}
+			<table width="100%">
+			    <tr>
+				   <td valign="bottom"><h2>Recent activity
+                   &nbsp;&nbsp;<select id="pf" name="pf" style="font-size:11px; width: 190px;" onchange="Go('{$siteAdr}account.php?act={$act}&pf='+_v('pf').value);">
+                   <option value="0">All Projects</option>
+                   {foreach key=k item=i from=$pl}
+                    <option value="{$i.project_id}"{if $pf == $i.project_id} selected="selected"{/if}>{$i.name}</option>
+                   {/foreach}
+                   </select>
+                   </h2>
+                   </td>
+				  <td align="right"> 
+                      
+			          <div  style="margin-top: 20px;"><a href="{$siteAdr}account.php{if $pf}?pf={$pf}{/if}">{if !$act}<b>view all</b>{else}view all{/if}</a> | <img src="{$imgDir}i-screen.gif"/> <a href="{$siteAdr}account.php?act=1{if $pf}&amp;pf={$pf}{/if}">{if 1 == $act}<b>view uploads</b>{else}view uploads{/if}</a> | <img src="{$imgDir}i-comment.gif"/> <a href="{$siteAdr}account.php?act=2{if $pf}&amp;pf={$pf}{/if}">{if 2 == $act}<b>view comments</b>{else}view comments{/if}</a>  (<a href="{$siteAdr}account.php?act=2&amp;what=1{if $pf}&amp;pf={$pf}{/if}">{if 1 == $what}<b>In</b>{else}In{/if}</a> | <a href="{$siteAdr}account.php?act=2&amp;what=2{if $pf}&amp;pf={$pf}{/if}">{if 2 == $what}<b>Out</b>{else}Out{/if}</a>) | <img src="{$imgDir}m-approve.gif"/> <a href="{$siteAdr}account.php?act=3{if $pf}&amp;pf={$pf}{/if}">{if 3 == $act}<b>show approved</b>{else}show approved{/if}</a>
+			           </div>
+                       
+				  </td>
+				</tr>
+            </table> 				
+			
+            <div style="width:100%; height: 5px;"><!-- --></div>
+                      
+            {section name=i loop=$hist}
+			{if !$hist[i].screen_id || ($hist[i].screen_id && $UserInfo.status != 1)}
+			    <div id="info{$hist[i].commentid}" class="main-list{if $hist[i].view eq 0}x{/if}{if $smarty.section.i.index mod 2 == 0} main-list{if $hist[i].view eq 0}x{/if}-bg{/if}">
+				<div class="date"{if 1 != $hist[i].view} style="font-weight: normal;"{/if}>{$hist[i].pdate}</div>
+				<div class="info"><img src="{if $hist[i].action == 'Upload Screen'}{$imgDir}i-screen.gif{elseif $hist[i].action == 'Add Comment'}{$imgDir}i-comment{if 1 == $hist[i].ustatus}_out{/if}.gif{elseif $hist[i].action == 'Approve Screen'}{$imgDir}m-approve.gif{else}{$imgDir}alert.gif{/if}" alt="" />
+				{$hist[i].what}
+				{if $hist[i].screen_id && (0 == $UserInfo.status || 2 == $UserInfo.status)}[ {*<!--<a href="javascript: if (confirm('Approve screen for client view?')) Go('{$siteAdr}account.php?mod=approve_view_screen&id={$hist[i].project_id}&sid={$hist[i].screen_id}');" style="color:#990000;">-->*}<font color="#990000"><b>!</b></font>{*<!--</a>-->*} ]{/if} 
+				{if $hist[i].comment_id && (0 == $UserInfo.status || 2 == $UserInfo.status)}[ <font color="#990000"><b>!</b></font> ]{/if}</div>
+			</div>
+			{/if}
+            {sectionelse}
+                <div>The history is empty</div>
+			{/section}
+			<br />{$pagging}
+			{*/if*}
+			{include file="mods/_footer.html"}
+		</div>
+	</div>
+</div>

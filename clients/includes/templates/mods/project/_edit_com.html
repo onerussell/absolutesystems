@@ -1,0 +1,10 @@
+                           <div class="comment-edit">
+						   <form id="fme">
+					       <textarea id="e_comment">{$eform.descr}</textarea>
+						   <div class="spacer s5"><!-- --></div>
+						   {if $eform.attach}<img src="{$imgDir}i-attach.gif" alt="" />&nbsp;<a href="{$siteAdr}files/images/{$eform.attach}" target="_blank">{$eform.attach}</a>&nbsp;&nbsp;<input type="checkbox" id="del_attach" value="1" />&nbsp;Delete attached file{/if}
+					       <div class="spacer s5"><!-- --></div>
+					       <a href="javascript: SaveCom({$eform.id});"><img src="{$imgDir}b-update.gif" alt="Submit" class="v" /></a> &nbsp; &nbsp; <a href="javascript: CancelEdit({$eform.id});"><img src="{$imgDir}b-cancel.gif" alt="Submit" class="v" /></a> &nbsp; &nbsp;{if 1 != $UserInfo.status} <input type="checkbox" class="v" id="e_internal" value="1"{if $eform.internal} checked="checked"{/if} />&nbsp;Internal use{/if}
+						   {if (0 == $UserInfo.status || 2 == $UserInfo.status) && 2 < $eform.ustatus} <input type="checkbox" class="v" id="e_aprove" value="1" />&nbsp;Approve message{/if}
+				           </form>
+						   </div>

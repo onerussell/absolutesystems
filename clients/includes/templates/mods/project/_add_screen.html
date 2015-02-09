@@ -1,0 +1,91 @@
+<body>
+<div class="container">
+	<div class="container-c">
+		<div class="wrap">
+		    {include file="mods/_logout.html"}
+			<div class="menu-right">
+				<a href="{$siteAdr}{$pg.link}{*{$siteAdr}account.php?id={$pg.id}*}">work view</a>
+				<a href="{$siteAdr}{$pg.link}/history{*{$siteAdr}account.php?id={$pg.id}&amp;action=history*}">history view</a>
+				<a href="{$siteAdr}{$pg.link}/map">sitemap view</a>
+			</div>
+			<h1><a href="{$siteAdr}">Projects</a> | {$pg.name}</h1>
+			<h3><a href="{$siteAdr}{$pg.link}">Overview</a> / {if $eform.parent || $parent} <a href="{$siteAdr}account.php?id={$pg.id}&amp;sc_id={$parinf.id}">{$parinf.name}</a>  / Upload new version{else}Add screen{/if} {if $sid} - Edit{/if}</h3>
+           
+			<div class="b-form">
+				
+				{if $errs}
+				    <font color="#990000">
+					<b>Errors:</b><br />
+					{foreach key=key item=item from=$errs}
+					    - {$item}<br />
+					{/foreach}
+					</font>
+					<div class="spacer s15"><!-- --></div>
+				{/if}
+				
+			<form name="fmx" id="fmx" method="post" action="{$siteAdr}account.php" enctype="multipart/form-data">
+			<input type="hidden" name="mod" value="add_screen" />
+			<input type="hidden" name="id" value="{$pg.id}" />
+			{if $sid}
+			<input type="hidden" name="sid" value="{$sid}" />
+			{/if}
+			{if $back}
+			<input type="hidden" name="back" value="{$back}" />
+			{/if}
+			<input type="hidden" name="eform[parent]" value="{if $eform.parent}{$eform.parent}{elseif $parent}{$parent}{else}0{/if}" />
+
+             
+            
+			
+                {if $eform.parent || $parent}
+				    {if $sid}
+				        <label>Screen name</label>
+			            <input type="text" class="input w360" name="eform[pname]" value="{$eform.pname}" />
+				        <div class="spacer s20"><!-- --></div>	
+					{else}
+					    <input type="hidden" name="eform[name]" value="" />		
+			        {/if}
+				{else}
+				    <label>Screen name</label>
+			        <input type="text" class="input w360" name="eform[name]" value="{$eform.name}" />
+				    <div class="spacer s20"><!-- --></div>
+                {/if}
+	        
+				{if $sid || (!($eform.parent || $parent) && !$sid)}
+				<label>Parent screen (for Site Map)</label>
+				<select name="eform[mparent]" class="input w360">				
+				<option value="0">---</option>
+				<option value="-1"{if $eform.mparent == -1} selected="selected"{/if}>ROOT</option>
+				{foreach key=k item=i from=$tops}
+				<option value="{$i.id}"{if $eform.mparent == $i.id} selected="selected"{/if}>{$i.name}</option>
+				{/foreach}
+				</select>
+				<div class="spacer s20"><!-- --></div>
+                {/if}
+				  
+				<label>File</label>
+                  <div id="main">
+				      You need to have the Flash Player installed. Click <a href="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash&promoid=BIOW">here</a> 
+			      </div>	
+				  <script type="text/javascript" src="{$jsDir}swfobject.js"></script>	
+			      <script type="text/javascript">
+			          var so1 = new SWFObject("{$siteAdr}e37uploader.swf?config={$siteAdr}e37uploader.php", "main", "405", "130", "9", "#FFFFFF");
+			          so1.addParam("allowFullScreen", "false");
+			          so1.addParam("scale", "noscale");  
+			          so1.write("main");
+			      </script>	
+				  {if $sid}<br /><a href="{$image_dir}/{$eform.image}" target="_blank">{$eform.image}</a>{/if}			
+				{*
+				<input type="file" name="upl" class="input w505" />
+				<div class="spacer s20"><!-- --></div>
+                *}
+				<div class="spacer s20"><!-- --></div>
+				<a href="javascript: _v('fmx').submit();"><img src="{$imgDir}{if $sid}b-update.gif{else}b-add.gif{/if}" alt="{if $sid}Edit{else}Add{/if}" /></a>
+			    &nbsp;&nbsp;<a href="javascript: Go('{$siteAdr}account.php{if $eform.parent}?id={$eform.parent}{assign var=tx value=1}{elseif $parent}?id={$parent}{assign var=tx value=1}{/if}{if $back}{if $tx}&{else}?{/if}sid={$back}{/if}');"><img src="{$imgDir}b-cancel.gif" alt="Cancel" /></a>
+			</form>
+			</div>
+
+			{include file="mods/_footer.html"}
+		</div>
+	</div>
+</div>

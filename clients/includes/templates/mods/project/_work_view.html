@@ -1,0 +1,177 @@
+<style type="text/css">
+{literal}
+	ul.boxy li { margin: 0px; }
+
+	#boxes {
+		font-family: Arial, sans-serif;
+		list-style-type: none;
+		margin: 0px;
+		padding: 0px;
+		width: 100%;
+	}
+	#boxes li {
+		position: relative;
+		float: left;
+		margin: 4px 8px 8px 4px;
+		width: 200px;
+		height: 275px;
+		border: 1px solid #CCC;
+		text-align: center;
+		padding-top: 5px;
+		background-color: #eeeeff;
+		overflow: hidden;
+
+	}
+
+	#popupbox {
+		display:none;
+		border:1px solid #676767;
+		opacity:.8;
+		filter:alpha(opacity=80);
+		zoom:1;
+		background-color:#eeeeff;
+	}
+
+	.handle {
+		cursor: move;
+		height: 100%;
+		border-width: 0px 0px 1px 0px;
+		color: #eee;
+		padding: 0px 0px;
+		margin: 0px;
+	}
+
+
+{/literal}
+</style>
+
+<script language="JavaScript" type="text/javascript" src="/sandbox/e37project/includes/templates/js/org/tool-man/core.js"></script>
+<script language="JavaScript" type="text/javascript" src="/sandbox/e37project/includes/templates/js/org/tool-man/events.js"></script>
+<script language="JavaScript" type="text/javascript" src="/sandbox/e37project/includes/templates/js/org/tool-man/css.js"></script>
+<script language="JavaScript" type="text/javascript" src="/sandbox/e37project/includes/templates/js/org/tool-man/coordinates.js"></script>
+<script language="JavaScript" type="text/javascript" src="/sandbox/e37project/includes/templates/js/org/tool-man/drag.js"></script>
+<script language="JavaScript" type="text/javascript" src="/sandbox/e37project/includes/templates/js/org/tool-man/dragsort.js"></script>
+<script language="JavaScript" type="text/javascript" src="/sandbox/e37project/includes/templates/js/org/tool-man/cookies.js"></script>
+
+<script language="JavaScript" type="text/javascript">
+{literal}
+	var dragsort = ToolMan.dragsort()
+	var junkdrawer = ToolMan.junkdrawer()
+
+	window.onload = function() {
+		junkdrawer.restoreListOrder("boxes");
+		dragsort.makeListSortable(document.getElementById("boxes"), setHandle);
+	}
+
+	function setHandle(item) {
+		item.toolManDragGroup.setHandle(findHandle(item))
+	}
+
+	function findHandle(item) {
+		var children = item.getElementsByTagName("div")
+		for (var i = 0; i < children.length; i++) {
+			var child = children[i]
+
+			if (child.getAttribute("class") == null) continue
+
+			if (child.getAttribute("class").indexOf("handle") >= 0)
+			return child
+		}
+	return item
+	}
+{/literal}
+</script>
+
+{if ('1' == $UserInfo.status ) || !$UserInfo }
+
+<div id="popupbox" class="popupbox">
+	Sorry, you do not have permission to be able to save the changed order of screens.&nbsp;|&nbsp;<a href="{$siteAdr}account.php?id={$pg.id}">Close</a>
+</div>
+
+{else}
+
+<div id="popupbox" class="popupbox">
+  <a href="#" onclick="window.location.href='{$siteAdr}account.php?mod=save_order&id={$pg.id}&neworder='+junkdrawer.serializeList(document.getElementById('boxes'))"/>Save Order</a> |
+  <a href="#" onclick="window.location.href='{$siteAdr}account.php?id={$pg.id}'">Cancel</a>
+</div>
+
+{/if}
+
+
+		<div  style="position:relative; height:75px;padding: 10px 10px 10px 10px;">
+
+			<div style="font-weight: bold;font-size: 12px; position:absolute;top:5px;right:90px;width:50px;">
+			{if $system_login}
+				<a href="{$siteAdr}index.php?logout=1">Log Out</a>
+			{else}
+				<a href="{$siteAdr}index.php">Sign In</a>
+			{/if}
+			</div>
+
+			<div style="position:absolute;top:0px; left:20px; margin:0;">
+				<h1><a href="{$siteAdr}{*index.php?mod=project*}">Projects</a> | {$pg.name} ({$number_of_screens}/{$number_of_revisions})</h1>
+			</div>
+
+			<div class="admin-list-func" style="position:absolute;top:55px; left:10px; margin:0;">
+				{if ('1' != $UserInfo.status  && $UserInfo ) }<a href="{$siteAdr}account.php?mod=add_screen&id={$pg.id}"><img src="{$imgDir}i-plus.gif" alt="Add Screen" />Add Screen</a>{/if}
+			</div>	
+
+
+		    <div style="font-weight: bold; font-size: 18px; position:absolute;top:30px;right:90px;width:350px">
+				<a href="{$siteAdr}{$pg.link}{*account.php?id={$pg.id}*}" style="color: #DADAE0 !important;">work view</a>&nbsp;&nbsp;&nbsp;
+				<a href="{$siteAdr}{$pg.link}/history{*account.php?id={$pg.id}&amp;action=history*}">history view</a>&nbsp;&nbsp;
+				<a href="{$siteAdr}{$pg.link}/map{*account.php?id={$pg.id}&amp;action=map*}">sitemap view</a>
+			</div>
+
+			<div style="font-weight: bold; font-size: 14px; position:absolute;top:65px;right:90px;width:120px;">
+			    <a href="{$siteAdr}{$pg.link}">{if !$list}<b>Thumbnails</b>{else}Thumbnails{/if}</a> | <a href="{$siteAdr}{$pg.link}?list=1">{if $list}<b>List</b>{else}List{/if}</a>
+			</div>
+
+		</div>	
+
+		<div style="padding: 10px 10px 10px 10px;float:left;text-align: left; ">
+			{if $list}
+			    
+				{foreach name=n key=k item=i from=$pl}
+				    <div class="main-listx main-list{if $smarty.foreach.n.index mod 2 == 0}-bg{/if}">
+					    {if ($UserInfo.status == '0' || $UserInfo.status == '2')}
+						<div style="float:left; width: 50px; margin-top: 5px;">
+						    {if $smarty.foreach.n.first}<img src="{$imgDir}btn_up.gif" alt="" />{else}<a href="{$siteAdr}{$pg.link}?list=1&amp;down={$i.id}"><img src="{$imgDir}btn_up_a.gif" alt="" /></a>{/if}{if $smarty.foreach.n.last}<img src="{$imgDir}btn_down.gif" alt="" />{else}<a href="{$siteAdr}{$pg.link}?list=1&amp;up={$i.id}"><img src="{$imgDir}btn_down_a.gif" alt="" /></a>{/if}
+						</div>
+						{/if}
+						<div style="float:left;  width: 450px; margin-top: 5px;"><a href="{$siteAdr}{$pg.link}/{if $i.nid}{$i.nlink}{else}{$i.link}{/if}{*account.php?sid={if $i.nid}{$i.nid}{else}{$i.id}{/if}*}" style="color:#3E9ADE;"><b>{$i.name}</b></a>{if ('' == $i.mparent || '0' == $i.mparent) && ( '0' == $UserInfo.status || 2 <= $UserInfo.status)} <img src="{$imgDir}map.gif" alt="" />{/if} <a href="{$siteAdr}{$pg.link}/{$i.olink}">View history{if $i.screen_count} ({$i.screen_count}){/if}</a> {if $i.html}[<a href="{$HTTP_HTML_DIR}{$i.html}" style="color: red;" target="_blank">HTML</a>]{/if}</div>
+					    <div style="float:right; margin-top: 5px;">{if $i.npdate}{$i.npdate}{else}{$i.pdate}{/if}</div>
+					</div>
+				{/foreach}
+				
+			{else}
+
+			<ul id="boxes">
+			    {foreach name=n key=k item=i from=$pl}
+			    {assign var="ov" value=$smarty.foreach.n.index+1}
+			    <li itemID={$i.id}>
+			    <div class="screen-list">
+			       <div class="handle">
+				    <h4><b>{$i.name}</b></h4>
+				   </div>
+					<a href="http://www.engine37.com{$siteAdr}{$pg.link}/{if $i.nid}{$i.nlink}{else}{$i.link}{/if}{*account.php?sid={if $i.nid}{$i.nid}{else}{$i.id}{/if}*}" >
+						<img src="{$siteAdr}{$image_dir}{if $i.nid}{if $i.nis_approve}{$resize_dir_ok}{elseif $i.nis_new}{$resize_dir_new}{else}{$resize_dir}{/if}{else}{if $i.is_approve}{$resize_dir_ok}{elseif $i.is_new}{$resize_dir_new}{else}{$resize_dir}{/if}{/if}/m_{if $i.nimage}{$i.nimage}{else}{$i.image}{/if}">
+					</a>	
+				    <div class="comm">{if $i.npdate}{$i.npdate}{else}{$i.pdate}{/if}<br /><a href="{$siteAdr}account.php{if $can_edit}?sid={if $i.nid}{$i.nid}{else}{$i.id}{/if}#com{/if}">{if $can_edit && 1 != $UserInfo.status} {if $i.nid}{$i.ncomcnt} comment{if 1 != $i.ncomcnt}s{/if} {else} {$i.comcnt} comment{if 1 != $i.comcnt}s{/if}{/if} {else} {if $i.nid}{$i.nclmcnt} comment{if 1 != $i.nclmcnt}s{/if} {else} {$i.clmcnt} comment{if 1 != $i.clmcnt}s{/if}{/if} {/if}</a> | <a href="{$siteAdr}account.php{if $can_edit}?sid={if $i.nid}{$i.nid}{else}{$i.id}{/if}#new{/if}">Add comment</a>
+					</div>
+				    <div class="up">{if $UserInfo.status != 1}
+						<a href="{$siteAdr}account.php?mod=add_screen&amp;parent={$i.id}&amp;id={$pg.id}">Upload new version</a><br />{/if}<a href="{$siteAdr}{$pg.link}/{$i.olink}">View history{if $i.screen_count} ({$i.screen_count}){/if}</a>
+					</div>
+				    </div>
+   			   </li>
+			    {foreachelse}
+			    no updates yet
+			    {/foreach}
+             </ul>
+			{/if}
+
+			<div class="spacer s15"><!-- --></div>
+
+			{include file="mods/_footer.html"}
+		</div>
+

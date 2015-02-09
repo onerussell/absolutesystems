@@ -1,0 +1,132 @@
+<div class="container">
+	<div class="container-c">
+		<div class="wrap">
+		    {include file="mods/_logout.html"}
+			<h1><a href="{$siteAdr}account.php?mod=admin">Administration</a> | <a href="{$siteAdr}account.php?mod=projects">Projects</a> | {$eform.name}</h1>
+
+            <form method="post" id="fma" action="{$siteAdr}account.php">
+			<input type="hidden" name="mod" value="add_proj" />
+			<input type="hidden" name="id" value="{$id}" />
+			{*
+			<div class="b-form p-link">
+				
+				<a href=""><img src="{$imgDir}i-close.gif" alt="" />Close project</a>
+				<a href=""><img src="{$imgDir}i-delete.gif" alt="" />Delete project</a>
+				
+			</div>
+			*}
+			<div class="spacer s5"><!-- --></div>
+				{if $errs}
+				    <font color="#990000">
+					<b>Errors:</b><br />
+					{foreach key=key item=item from=$errs}
+					    - {$item}<br />
+					{/foreach}
+					</font>
+					<div class="spacer s15"><!-- --></div>
+				{/if}
+<!--
+			<script src="{$jsDir}JsHttpRequest.js"></script>
+			<script src="{$jsDir}JsHttpRequest-prototype.js"></script>-->
+            <script src="{$jsDir}prototype.js"></script>
+			{literal}
+			<script language="javascript" type="text/javascript">
+			var icnt = 4;			
+			function GetUList(status)
+			{
+			
+                new Ajax.Request('{/literal}{$siteAdr}{literal}ajax.php', 
+				{
+                    method: 'get',
+                    parameters: 
+				    {
+                       mod   : "getList",
+					   status: status,
+					   icnt  : icnt
+                    },
+
+                    onSuccess: function(tr) 
+				    {
+						$('usr'+status).innerHTML += tr.responseText;
+						icnt += 1;
+                    }
+                });
+			}
+					
+			function DelBlock(number)
+			{
+			    $('usr_'+number).value = 0;
+				$('usr_'+number).style.display='none';
+			}
+			</script>
+			{/literal}
+			<div class="b-form">
+				<label>Project name</label>
+				<input type="text" name="eform[name]" value="{$eform.name}" class="input w350" />
+				<div class="spacer s20"><!-- --></div>
+				<label>Status<label>
+                <select name="eform[active]">
+					<option value="1" {if 1== $eform.active} selected="selected"{/if}>Active</option>
+					<option value="2" {if 2== $eform.active} selected="selected"{/if}>Archive</option>
+				</select>
+				<div class="spacer s20"><!-- --></div>
+                {assign var="ox" value=-1}
+				{foreach name=n3 key=k3 item=i3 from=$status_ar}
+				{if !$smarty.foreach.n3.first}
+				<!-- -->
+				<label>{$i3}</label>
+				{assign var="ox" value=$ox+1}
+                <select name="eform[usr{$k3}][{$ox}]">
+				<option value="0"> ---</option>
+				{if 1 == $k3}
+				    {assign var="ov" value="usr1"}
+					{assign var="va" value=$clients}
+				{elseif 2 == $k3}
+			        {assign var="ov" value="usr2"}
+					{assign var="va" value=$managers}
+				{elseif 3 == $k3}
+			        {assign var="ov" value="usr3"}
+					{assign var="va" value=$designers}
+				{elseif 4 == $k3}	
+				    {assign var="ov" value="usr4"}	
+					{assign var="va" value=$programmers}		
+				{/if}
+				
+				{foreach name=n key=k item=i from=$va}  
+				<option value="{$i.uid}"{if $i.uid == $eform.$ov.0} selected="selected"{/if}>{$i.name} {$i.lname} [{$i.login}]</option>
+				{/foreach}
+				
+				</select>
+				{if $smarty.foreach.n.total}<span><a href="javascript: GetUList({$k3});">new {$i3}?</a></span>{/if}
+				<div class="spacer s20"><!-- --></div>  				
+				{foreach key=k2 item=i2 name="n2" from=$eform.$ov}
+				{if !$smarty.foreach.n2.first}
+				{assign var="ox" value=$ox+1}	
+				<span id="usr_{$ox}">
+				<select name="eform[{$ov}][{$ox}]">
+				<option value="0"> ---</option>
+				{foreach key=k item=i from=$va}  
+				<option value="{$i.uid}"{if $i.uid == $i2} selected="selected"{/if}>{$i.name} {$i.lname} [{$i.login}]</option>
+				{/foreach}
+				</select>
+				<a href="javascript:DelBlock('{$ox}');">Delete</a>
+				<div class="spacer s20"><!-- --></div>  
+				</span>
+				{/if}
+				{/foreach}
+				<span id="usr{$k3}"></span>
+				<!-- -->
+				{/if}
+				{/foreach}
+				
+				<a href="javascript: $('fma').submit();"><img src="{$imgDir}b-update.gif" alt="Update" /></a> &nbsp; <a href="javascript: document.location='{$siteAdr}account.php?mod=projects';"><img src="{$imgDir}b-cancel.gif" alt="" /></a>
+			</div>
+            </form>
+            <script language="javascript">
+			{assign var="ox" value=$ox+1}
+			icnt = {$ox};
+			</script>
+            {include file="mods/_footer.html"}
+		</div>
+	</div>
+</div>

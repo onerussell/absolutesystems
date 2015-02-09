@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="container-c">
+		<div class="wrap">
+            {include file="mods/_logout.html"}
+    		<h1><a href="{$siteAdr}account.php?mod=admin">Administration</a> | Users</h1>
+            {foreach key=k item=i name=n from=$ul} 
+			<div class="main-list {if $smarty.foreach.n.index mod 2 == 0}main-list-bg{/if} {if $i.image}main-list-img{/if}">
+				<div class="date"><a href="{$siteAdr}account.php?mod=add_user&amp;id={$i.uid}"><img src="{$imgDir}add_data.gif" alt="Edit user" />Edit</a> &nbsp; {if 1 != $i.uid} <a name="bb"> </a> <a href="javascript: if (confirm('Delete user?')) {literal}{{/literal} document.location = '{$siteAdr}account.php?mod=users&amp;del={$i.uid}';{literal}}{/literal}"><img src="{$imgDir}i-deletes.gif" alt="Delete user" />Delete</a>{/if}</div>
+				<div class="fio">{if $ov != $i.status}{assign var="ov" value=$i.status}{$status_ar.$ov}s{/if}</div>
+				<div class="avatar">{if $i.image}<a href="{$siteAdr}account.php?mod=add_user&amp;id={$i.uid}"><img src="{$siteAdr}{$image_dir}/{$i.image}"/></a>{/if}</div>
+				<div class="fio-info"><b>[{$i.login}]</b> {$i.name} {$i.lname}</div>
+			</div>
+			{/foreach}
+            {include file="mods/_footer.html"}
+		</div>
+	</div>
+</div>

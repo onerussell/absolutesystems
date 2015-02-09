@@ -1,0 +1,28 @@
+<div class="container">
+	<div class="container-c">
+		<div class="wrap">
+		    {include file="mods/_logout.html"}
+			<h1><a href="{$siteAdr}account.php?mod=admin">Administration</a> | Projects</h1>
+
+			<table width="100%" cellpadding="5">
+			 <tr>
+			  <td align="right">
+			   <b><a {if 0 == $prj_status}class="on"{/if} href="{$siteAdr}account.php?mod=projects&prj_status=0">All</a> | <a {if 1 == $prj_status}class="on"{/if} href="{$siteAdr}account.php?mod=projects&prj_status=1">Active</a> | <a {if 2 == $prj_status}class="on"{/if} href="{$siteAdr}account.php?mod=projects&prj_status=2">Archive</a></b>	
+			  </td>
+			 </tr>
+			</table>
+
+            {foreach key=k item=i name=n from=$pl} 
+			<div class="main-list{if $smarty.foreach.n.index mod 2 == 0} main-list-bg{/if}">
+				<div class="date">{$i.last_upd}&nbsp;&nbsp;&nbsp;<a href="{$siteAdr}account.php?mod=add_proj&amp;id={$i.id}"><img src="{$imgDir}add_data.gif" alt="Edit user" /> Edit</a> <a name="bb">|</a> <a href="javascript: if (confirm('Delete project?')) document.location='{$siteAdr}account.php?mod=projects&amp;del={$i.id}';"><img src="{$imgDir}i-deletes.gif" alt="Delete user" />Delete</a></div>
+				<div class="info"><a href="{$siteAdr}account.php?id={$i.id}">{$i.name}</a></div>
+			</div>
+			{foreachelse}
+			No projects
+			{/foreach}
+			<div class="spacer"><!-- --></div>
+
+            {include file="mods/_footer.html"}
+		</div>
+	</div>
+</div>

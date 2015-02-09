@@ -1,0 +1,48 @@
+<div class="container">
+	<div class="container-c">
+		<div class="wrap">
+            {include file="mods/_logout.html"}
+	    	<div class="menu-right">
+				<a href="{$siteAdr}{$pg.link}{*{$siteAdr}account.php?id={$pg.id}*}">work view</a>
+				<a href="{$siteAdr}{$pg.link}/history{*{$siteAdr}account.php?id={$pg.id}&amp;action=history*}" class="on">history view</a>
+				<a href="{$siteAdr}{$pg.link}/map">sitemap view</a>
+			</div>
+			<h1><a href="{$siteAdr}{*index.php?mod=project*}">Projects</a> | {$pg.name}</h1>
+  
+			<div class="admin-list-func">
+				<div class="w205">{if $UserInfo.status != 1}<a href="{$siteAdr}account.php?mod=add_screen&id={$pg.id}"><img src="{$imgDir}i-plus.gif" alt="" />Add Screen</a>{/if}</div>
+			</div>	
+
+			<div class="spacer s20"><!-- --></div>
+			{foreach name=n key=k item=i from=$pl}
+			{if $i.first == 1}
+			{assign var="ov" value=0}
+			{if !$smarty.foreach.n.first}
+			<div class="spacer s15"><!-- --></div>
+			<div class="spacer line"><!-- --></div>
+			<div class="spacer s15"><!-- --></div>
+			{/if}
+			<h3>{if $sc_id}<a href="{$siteAdr}{$pg.link}{*account.php?id={$pg.id}*}">Overview</a> / {/if}{$i.name}</h3>
+			{/if}
+			{math assign="ov" equation="x + 1" x=$ov}
+			<div class="screen-list{if $ov mod 4 == 0} screen-list-l{/if}">
+				<a href="{$siteAdr}{$pg.link}/{$i.link}{*account.php?sid={$i.id}*}"><img src="{$siteAdr}{$image_dir}{if $i.is_approve}{$resize_dir_ok}{elseif $i.is_new}{$resize_dir_new}{else}{$resize_dir}{/if}/m_{$i.image}" alt="" /></a>
+				<div class="comm">{$i.pdate}<br /><a href="{$siteAdr}account.php{if $can_edit}?sid={$i.id}#com{/if}">{if $can_edit && 1 != $UserInfo.status}{$i.comcnt} comment{if 1 != $i.comcnt}s{/if}{else}{$i.clmcnt} comment{if 1 != $i.clmcnt}s{/if}{/if}</a> | <a href="{$siteAdr}account.php{if $can_edit}?sid={$i.id}#new{/if}">Add comment</a></div>
+			</div>
+			
+			{if $ov mod 4 == 0}
+			<div class="spacer s10"><!-- --></div>
+			{/if}
+			{foreachelse}
+			no updates yet
+			<div class="spacer s15"><!-- --></div>
+			<div class="spacer line"><!-- --></div>
+			{/foreach}
+			
+
+			<div class="spacer s15"><!-- --></div>
+
+			{include file="mods/_footer.html"}
+		</div>
+	</div>
+</div>
